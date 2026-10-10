@@ -1,0 +1,18 @@
+{
+  "checkpoint_best_total.pth": {
+    "size_bytes": 122030856,
+    "sha256": "e0935464850229ce87e160c837f234129d5295e16dbe38290d79448d1ea8fdf2",
+    "parts": [
+      "checkpoint_best_total.pth.part-00",
+      "checkpoint_best_total.pth.part-01"
+    ]
+  },
+  "model.onnx": {
+    "size_bytes": 114587790,
+    "sha256": "5fc694fe94a643a0e3b650fd089dcc3fd5cb5ff83795ec1f09fcc998cc234858",
+    "parts": [
+      "model.onnx.part-00",
+      "model.onnx.part-01"
+    ]
+  }
+}

@@ -1,0 +1,1070 @@
+{
+  "checkpoint": "/home/gmn/danger/codes/intern/runs/pen_notebook_pouch_rfdetr_nano_v1/checkpoint_best_total.pth",
+  "classes": {
+    "0": "pen",
+    "1": "paper_notebook",
+    "2": "pencil_pouch"
+  },
+  "metric": "greedy per-class box match, IoU >= 0.50",
+  "validation": {
+    "pen_notebook_validation_base_images": {
+      "pen": {
+        "targets": 48,
+        "tp": 42,
+        "fp": 10,
+        "fn": 6,
+        "precision": 0.8076923076923077,
+        "recall": 0.875,
+        "f1": 0.84,
+        "threshold": 0.3
+      },
+      "paper_notebook": {
+        "targets": 23,
+        "tp": 19,
+        "fp": 0,
+        "fn": 4,
+        "precision": 1.0,
+        "recall": 0.8260869565217391,
+        "f1": 0.9047619047619048,
+        "threshold": 0.45
+      },
+      "pencil_pouch": {
+        "targets": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "threshold": 0.3
+      }
+    },
+    "pouch_validation_same_item_session": {
+      "pen": {
+        "targets": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "threshold": 0.3
+      },
+      "paper_notebook": {
+        "targets": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "threshold": 0.45
+      },
+      "pencil_pouch": {
+        "targets": 27,
+        "tp": 26,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.9629629629629629,
+        "f1": 0.9811320754716981,
+        "threshold": 0.3
+      }
+    }
+  },
+  "test_original_pen_notebook_set": {
+    "pen": {
+      "targets": 94,
+      "tp": 84,
+      "fp": 28,
+      "fn": 10,
+      "precision": 0.75,
+      "recall": 0.8936170212765957,
+      "f1": 0.8155339805825242,
+      "threshold": 0.3
+    },
+    "paper_notebook": {
+      "targets": 0,
+      "tp": 0,
+      "fp": 2,
+      "fn": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "threshold": 0.45
+    },
+    "pencil_pouch": {
+      "targets": 0,
+      "tp": 0,
+      "fp": 3,
+      "fn": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "threshold": 0.3
+    },
+    "pencil_pouch_threshold_curve": [
+      {
+        "targets": 0,
+        "tp": 0,
+        "fp": 27,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "threshold": 0.05
+      },
+      {
+        "targets": 0,
+        "tp": 0,
+        "fp": 8,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "threshold": 0.1
+      },
+      {
+        "targets": 0,
+        "tp": 0,
+        "fp": 5,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "threshold": 0.15
+      },
+      {
+        "targets": 0,
+        "tp": 0,
+        "fp": 4,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "threshold": 0.2
+      },
+      {
+        "targets": 0,
+        "tp": 0,
+        "fp": 3,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "threshold": 0.25
+      },
+      {
+        "targets": 0,
+        "tp": 0,
+        "fp": 3,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "threshold": 0.3
+      },
+      {
+        "targets": 0,
+        "tp": 0,
+        "fp": 2,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "threshold": 0.35
+      },
+      {
+        "targets": 0,
+        "tp": 0,
+        "fp": 2,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "threshold": 0.4
+      },
+      {
+        "targets": 0,
+        "tp": 0,
+        "fp": 2,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "threshold": 0.45
+      },
+      {
+        "targets": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "threshold": 0.5
+      },
+      {
+        "targets": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "threshold": 0.6
+      },
+      {
+        "targets": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "threshold": 0.7
+      },
+      {
+        "targets": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "threshold": 0.8
+      }
+    ]
+  },
+  "threshold_curves": {
+    "pen_notebook_validation_base_images": {
+      "pen": [
+        {
+          "targets": 48,
+          "tp": 43,
+          "fp": 141,
+          "fn": 5,
+          "precision": 0.23369565217391305,
+          "recall": 0.8958333333333334,
+          "f1": 0.3706896551724138,
+          "threshold": 0.05
+        },
+        {
+          "targets": 48,
+          "tp": 42,
+          "fp": 30,
+          "fn": 6,
+          "precision": 0.5833333333333334,
+          "recall": 0.875,
+          "f1": 0.7,
+          "threshold": 0.1
+        },
+        {
+          "targets": 48,
+          "tp": 42,
+          "fp": 15,
+          "fn": 6,
+          "precision": 0.7368421052631579,
+          "recall": 0.875,
+          "f1": 0.8,
+          "threshold": 0.15
+        },
+        {
+          "targets": 48,
+          "tp": 42,
+          "fp": 12,
+          "fn": 6,
+          "precision": 0.7777777777777778,
+          "recall": 0.875,
+          "f1": 0.8235294117647058,
+          "threshold": 0.2
+        },
+        {
+          "targets": 48,
+          "tp": 42,
+          "fp": 10,
+          "fn": 6,
+          "precision": 0.8076923076923077,
+          "recall": 0.875,
+          "f1": 0.84,
+          "threshold": 0.25
+        },
+        {
+          "targets": 48,
+          "tp": 42,
+          "fp": 10,
+          "fn": 6,
+          "precision": 0.8076923076923077,
+          "recall": 0.875,
+          "f1": 0.84,
+          "threshold": 0.3
+        },
+        {
+          "targets": 48,
+          "tp": 41,
+          "fp": 8,
+          "fn": 7,
+          "precision": 0.8367346938775511,
+          "recall": 0.8541666666666666,
+          "f1": 0.845360824742268,
+          "threshold": 0.35
+        },
+        {
+          "targets": 48,
+          "tp": 41,
+          "fp": 7,
+          "fn": 7,
+          "precision": 0.8541666666666666,
+          "recall": 0.8541666666666666,
+          "f1": 0.8541666666666666,
+          "threshold": 0.4
+        },
+        {
+          "targets": 48,
+          "tp": 41,
+          "fp": 7,
+          "fn": 7,
+          "precision": 0.8541666666666666,
+          "recall": 0.8541666666666666,
+          "f1": 0.8541666666666666,
+          "threshold": 0.45
+        },
+        {
+          "targets": 48,
+          "tp": 41,
+          "fp": 7,
+          "fn": 7,
+          "precision": 0.8541666666666666,
+          "recall": 0.8541666666666666,
+          "f1": 0.8541666666666666,
+          "threshold": 0.5
+        },
+        {
+          "targets": 48,
+          "tp": 37,
+          "fp": 5,
+          "fn": 11,
+          "precision": 0.8809523809523809,
+          "recall": 0.7708333333333334,
+          "f1": 0.8222222222222222,
+          "threshold": 0.6
+        },
+        {
+          "targets": 48,
+          "tp": 29,
+          "fp": 2,
+          "fn": 19,
+          "precision": 0.9354838709677419,
+          "recall": 0.6041666666666666,
+          "f1": 0.7341772151898734,
+          "threshold": 0.7
+        },
+        {
+          "targets": 48,
+          "tp": 20,
+          "fp": 0,
+          "fn": 28,
+          "precision": 1.0,
+          "recall": 0.4166666666666667,
+          "f1": 0.5882352941176471,
+          "threshold": 0.8
+        }
+      ],
+      "paper_notebook": [
+        {
+          "targets": 23,
+          "tp": 22,
+          "fp": 50,
+          "fn": 1,
+          "precision": 0.3055555555555556,
+          "recall": 0.9565217391304348,
+          "f1": 0.4631578947368421,
+          "threshold": 0.05
+        },
+        {
+          "targets": 23,
+          "tp": 22,
+          "fp": 5,
+          "fn": 1,
+          "precision": 0.8148148148148148,
+          "recall": 0.9565217391304348,
+          "f1": 0.88,
+          "threshold": 0.1
+        },
+        {
+          "targets": 23,
+          "tp": 22,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.9565217391304348,
+          "f1": 0.9777777777777777,
+          "threshold": 0.15
+        },
+        {
+          "targets": 23,
+          "tp": 21,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.9130434782608695,
+          "f1": 0.9545454545454546,
+          "threshold": 0.2
+        },
+        {
+          "targets": 23,
+          "tp": 21,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.9130434782608695,
+          "f1": 0.9545454545454546,
+          "threshold": 0.25
+        },
+        {
+          "targets": 23,
+          "tp": 20,
+          "fp": 0,
+          "fn": 3,
+          "precision": 1.0,
+          "recall": 0.8695652173913043,
+          "f1": 0.9302325581395349,
+          "threshold": 0.3
+        },
+        {
+          "targets": 23,
+          "tp": 19,
+          "fp": 0,
+          "fn": 4,
+          "precision": 1.0,
+          "recall": 0.8260869565217391,
+          "f1": 0.9047619047619048,
+          "threshold": 0.35
+        },
+        {
+          "targets": 23,
+          "tp": 19,
+          "fp": 0,
+          "fn": 4,
+          "precision": 1.0,
+          "recall": 0.8260869565217391,
+          "f1": 0.9047619047619048,
+          "threshold": 0.4
+        },
+        {
+          "targets": 23,
+          "tp": 19,
+          "fp": 0,
+          "fn": 4,
+          "precision": 1.0,
+          "recall": 0.8260869565217391,
+          "f1": 0.9047619047619048,
+          "threshold": 0.45
+        },
+        {
+          "targets": 23,
+          "tp": 19,
+          "fp": 0,
+          "fn": 4,
+          "precision": 1.0,
+          "recall": 0.8260869565217391,
+          "f1": 0.9047619047619048,
+          "threshold": 0.5
+        },
+        {
+          "targets": 23,
+          "tp": 18,
+          "fp": 0,
+          "fn": 5,
+          "precision": 1.0,
+          "recall": 0.782608695652174,
+          "f1": 0.8780487804878049,
+          "threshold": 0.6
+        },
+        {
+          "targets": 23,
+          "tp": 18,
+          "fp": 0,
+          "fn": 5,
+          "precision": 1.0,
+          "recall": 0.782608695652174,
+          "f1": 0.8780487804878049,
+          "threshold": 0.7
+        },
+        {
+          "targets": 23,
+          "tp": 18,
+          "fp": 0,
+          "fn": 5,
+          "precision": 1.0,
+          "recall": 0.782608695652174,
+          "f1": 0.8780487804878049,
+          "threshold": 0.8
+        }
+      ],
+      "pencil_pouch": [
+        {
+          "targets": 0,
+          "tp": 0,
+          "fp": 25,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "threshold": 0.05
+        },
+        {
+          "targets": 0,
+          "tp": 0,
+          "fp": 3,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "threshold": 0.1
+        },
+        {
+          "targets": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "threshold": 0.15
+        },
+        {
+          "targets": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "threshold": 0.2
+        },
+        {
+          "targets": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "threshold": 0.25
+        },
+        {
+          "targets": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "threshold": 0.3
+        },
+        {
+          "targets": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "threshold": 0.35
+        },
+        {
+          "targets": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "threshold": 0.4
+        },
+        {
+          "targets": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "threshold": 0.45
+        },
+        {
+          "targets": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "threshold": 0.5
+        },
+        {
+          "targets": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "threshold": 0.6
+        },
+        {
+          "targets": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "threshold": 0.7
+        },
+        {
+          "targets": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "threshold": 0.8
+        }
+      ]
+    },
+    "pouch_validation_same_item_session": {
+      "pen": [
+        {
+          "targets": 0,
+          "tp": 0,
+          "fp": 14,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "threshold": 0.05
+        },
+        {
+          "targets": 0,
+          "tp": 0,
+          "fp": 9,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "threshold": 0.1
+        },
+        {
+          "targets": 0,
+          "tp": 0,
+          "fp": 4,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "threshold": 0.15
+        },
+        {
+          "targets": 0,
+          "tp": 0,
+          "fp": 3,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "threshold": 0.2
+        },
+        {
+          "targets": 0,
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "threshold": 0.25
+        },
+        {
+          "targets": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "threshold": 0.3
+        },
+        {
+          "targets": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "threshold": 0.35
+        },
+        {
+          "targets": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "threshold": 0.4
+        },
+        {
+          "targets": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "threshold": 0.45
+        },
+        {
+          "targets": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "threshold": 0.5
+        },
+        {
+          "targets": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "threshold": 0.6
+        },
+        {
+          "targets": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "threshold": 0.7
+        },
+        {
+          "targets": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "threshold": 0.8
+        }
+      ],
+      "paper_notebook": [
+        {
+          "targets": 0,
+          "tp": 0,
+          "fp": 3,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "threshold": 0.05
+        },
+        {
+          "targets": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "threshold": 0.1
+        },
+        {
+          "targets": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "threshold": 0.15
+        },
+        {
+          "targets": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "threshold": 0.2
+        },
+        {
+          "targets": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "threshold": 0.25
+        },
+        {
+          "targets": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "threshold": 0.3
+        },
+        {
+          "targets": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "threshold": 0.35
+        },
+        {
+          "targets": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "threshold": 0.4
+        },
+        {
+          "targets": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "threshold": 0.45
+        },
+        {
+          "targets": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "threshold": 0.5
+        },
+        {
+          "targets": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "threshold": 0.6
+        },
+        {
+          "targets": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "threshold": 0.7
+        },
+        {
+          "targets": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "threshold": 0.8
+        }
+      ],
+      "pencil_pouch": [
+        {
+          "targets": 27,
+          "tp": 27,
+          "fp": 12,
+          "fn": 0,
+          "precision": 0.6923076923076923,
+          "recall": 1.0,
+          "f1": 0.8181818181818182,
+          "threshold": 0.05
+        },
+        {
+          "targets": 27,
+          "tp": 27,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.9642857142857143,
+          "recall": 1.0,
+          "f1": 0.9818181818181818,
+          "threshold": 0.1
+        },
+        {
+          "targets": 27,
+          "tp": 27,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.9642857142857143,
+          "recall": 1.0,
+          "f1": 0.9818181818181818,
+          "threshold": 0.15
+        },
+        {
+          "targets": 27,
+          "tp": 27,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "threshold": 0.2
+        },
+        {
+          "targets": 27,
+          "tp": 27,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "threshold": 0.25
+        },
+        {
+          "targets": 27,
+          "tp": 26,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.9629629629629629,
+          "f1": 0.9811320754716981,
+          "threshold": 0.3
+        },
+        {
+          "targets": 27,
+          "tp": 26,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.9629629629629629,
+          "f1": 0.9811320754716981,
+          "threshold": 0.35
+        },
+        {
+          "targets": 27,
+          "tp": 25,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.9259259259259259,
+          "f1": 0.9615384615384616,
+          "threshold": 0.4
+        },
+        {
+          "targets": 27,
+          "tp": 25,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.9259259259259259,
+          "f1": 0.9615384615384616,
+          "threshold": 0.45
+        },
+        {
+          "targets": 27,
+          "tp": 25,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.9259259259259259,
+          "f1": 0.9615384615384616,
+          "threshold": 0.5
+        },
+        {
+          "targets": 27,
+          "tp": 22,
+          "fp": 0,
+          "fn": 5,
+          "precision": 1.0,
+          "recall": 0.8148148148148148,
+          "f1": 0.8979591836734694,
+          "threshold": 0.6
+        },
+        {
+          "targets": 27,
+          "tp": 21,
+          "fp": 0,
+          "fn": 6,
+          "precision": 1.0,
+          "recall": 0.7777777777777778,
+          "f1": 0.875,
+          "threshold": 0.7
+        },
+        {
+          "targets": 27,
+          "tp": 18,
+          "fp": 0,
+          "fn": 9,
+          "precision": 1.0,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "threshold": 0.8
+        }
+      ]
+    }
+  },
+  "scope_note": "Pouch validation is 27 held-out photos from the same photographed pouch/session; there is no independent pouch test set. The original pen/notebook test split has no pouch positive labels.",
+  "best_validation_f1_thresholds": {
+    "pen": {
+      "targets": 48,
+      "tp": 41,
+      "fp": 7,
+      "fn": 7,
+      "precision": 0.8541666666666666,
+      "recall": 0.8541666666666666,
+      "f1": 0.8541666666666666,
+      "threshold": 0.4
+    },
+    "paper_notebook": {
+      "targets": 23,
+      "tp": 22,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1.0,
+      "recall": 0.9565217391304348,
+      "f1": 0.9777777777777777,
+      "threshold": 0.15
+    },
+    "pencil_pouch": {
+      "targets": 27,
+      "tp": 27,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "threshold": 0.2
+    }
+  }
+}

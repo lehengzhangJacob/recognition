@@ -1,0 +1,16 @@
+{
+  "model": "RF-DETR Nano official COCO pretrained weights",
+  "classes": [
+    "pen",
+    "paper_notebook",
+    "pencil_pouch"
+  ],
+  "dataset": "/home/gmn/danger/codes/intern/vending_machine_datasets/pen_notebook_pouch_rfdetr_3class",
+  "epochs": 25,
+  "resolution": 576,
+  "batch_size": 4,
+  "gradient_accumulation": 4,
+  "learning_rate": 0.0001,
+  "environment": "pen-notebook-rfdetr",
+  "notes": "Dedicated three-class output; does not retain the original COCO 80 classes or OIV7 601 classes. Pouch validation is same-item/same-session."
+}

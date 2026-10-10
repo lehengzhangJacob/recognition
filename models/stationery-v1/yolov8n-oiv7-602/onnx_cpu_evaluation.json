@@ -1,0 +1,207 @@
+{
+  "models": {
+    "yolo": {
+      "pen_notebook_validation_base_images": {
+        "pen": {
+          "targets": 48,
+          "tp": 33,
+          "fp": 6,
+          "fn": 15,
+          "precision": 0.8461538461538461,
+          "recall": 0.6875,
+          "threshold": 0.3,
+          "iou": 0.5
+        },
+        "paper_notebook": {
+          "targets": 23,
+          "tp": 18,
+          "fp": 4,
+          "fn": 5,
+          "precision": 0.8181818181818182,
+          "recall": 0.782608695652174,
+          "threshold": 0.45,
+          "iou": 0.5
+        },
+        "pencil_pouch": {
+          "targets": 0,
+          "tp": 0,
+          "fp": 7,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "threshold": 0.3,
+          "iou": 0.5
+        }
+      },
+      "pouch_validation_same_item_session": {
+        "pen": {
+          "targets": 0,
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "threshold": 0.3,
+          "iou": 0.5
+        },
+        "paper_notebook": {
+          "targets": 0,
+          "tp": 0,
+          "fp": 13,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "threshold": 0.45,
+          "iou": 0.5
+        },
+        "pencil_pouch": {
+          "targets": 27,
+          "tp": 23,
+          "fp": 2,
+          "fn": 4,
+          "precision": 0.92,
+          "recall": 0.8518518518518519,
+          "threshold": 0.3,
+          "iou": 0.5
+        }
+      },
+      "original_pen_notebook_test_split": {
+        "pen": {
+          "targets": 94,
+          "tp": 58,
+          "fp": 31,
+          "fn": 36,
+          "precision": 0.651685393258427,
+          "recall": 0.6170212765957447,
+          "threshold": 0.3,
+          "iou": 0.5
+        },
+        "paper_notebook": {
+          "targets": 0,
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "threshold": 0.45,
+          "iou": 0.5
+        },
+        "pencil_pouch": {
+          "targets": 0,
+          "tp": 0,
+          "fp": 10,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "threshold": 0.3,
+          "iou": 0.5
+        }
+      }
+    },
+    "rfdetr": {
+      "pen_notebook_validation_base_images": {
+        "pen": {
+          "targets": 48,
+          "tp": 43,
+          "fp": 9,
+          "fn": 5,
+          "precision": 0.8269230769230769,
+          "recall": 0.8958333333333334,
+          "threshold": 0.3,
+          "iou": 0.5
+        },
+        "paper_notebook": {
+          "targets": 23,
+          "tp": 19,
+          "fp": 0,
+          "fn": 4,
+          "precision": 1.0,
+          "recall": 0.8260869565217391,
+          "threshold": 0.45,
+          "iou": 0.5
+        },
+        "pencil_pouch": {
+          "targets": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "threshold": 0.3,
+          "iou": 0.5
+        }
+      },
+      "pouch_validation_same_item_session": {
+        "pen": {
+          "targets": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "threshold": 0.3,
+          "iou": 0.5
+        },
+        "paper_notebook": {
+          "targets": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "threshold": 0.45,
+          "iou": 0.5
+        },
+        "pencil_pouch": {
+          "targets": 27,
+          "tp": 26,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.9629629629629629,
+          "threshold": 0.3,
+          "iou": 0.5
+        }
+      },
+      "original_pen_notebook_test_split": {
+        "pen": {
+          "targets": 94,
+          "tp": 84,
+          "fp": 27,
+          "fn": 10,
+          "precision": 0.7567567567567568,
+          "recall": 0.8936170212765957,
+          "threshold": 0.3,
+          "iou": 0.5
+        },
+        "paper_notebook": {
+          "targets": 0,
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "threshold": 0.45,
+          "iou": 0.5
+        },
+        "pencil_pouch": {
+          "targets": 0,
+          "tp": 0,
+          "fp": 3,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "threshold": 0.3,
+          "iou": 0.5
+        }
+      }
+    }
+  },
+  "thresholds": {
+    "pen": 0.3,
+    "paper_notebook": 0.45,
+    "pencil_pouch": 0.3
+  },
+  "scope": "CPU ONNX runtime outputs; box match IoU >= 0.5. Pouch validation is same item/session; old test has no pouch positives.",
+  "cpu": {}
+}

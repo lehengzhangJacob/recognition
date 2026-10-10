@@ -1,0 +1,678 @@
+{
+  "metric": "greedy per-class match at IoU >= 0.50",
+  "class_ids": {
+    "pen": 376,
+    "pencil_pouch": 377,
+    "paper_notebook": 601
+  },
+  "thresholds": {
+    "pen": 0.3,
+    "pencil_pouch": 0.3,
+    "paper_notebook": 0.45
+  },
+  "scope_note": "Pouch validation is the 27 same-item/same-session held-out images. The original test split contains 65 images, 94 Pen boxes, and no pouch or notebook positives.",
+  "models": {
+    "prior_full_oiv7_602": {
+      "pen_notebook_validation_base_images": {
+        "pen": {
+          "targets": 48,
+          "tp": 33,
+          "fp": 2,
+          "fn": 15,
+          "images_with_tp": 33,
+          "precision": 0.9428571428571428,
+          "recall": 0.6875,
+          "threshold": 0.3,
+          "iou_threshold": 0.5
+        },
+        "pencil_pouch": {
+          "targets": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "images_with_tp": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "threshold": 0.3,
+          "iou_threshold": 0.5
+        },
+        "paper_notebook": {
+          "targets": 23,
+          "tp": 17,
+          "fp": 2,
+          "fn": 6,
+          "images_with_tp": 17,
+          "precision": 0.8947368421052632,
+          "recall": 0.7391304347826086,
+          "threshold": 0.45,
+          "iou_threshold": 0.5
+        }
+      },
+      "pouch_validation_same_item_session": {
+        "pen": {
+          "targets": 0,
+          "tp": 0,
+          "fp": 2,
+          "fn": 0,
+          "images_with_tp": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "threshold": 0.3,
+          "iou_threshold": 0.5
+        },
+        "pencil_pouch": {
+          "targets": 27,
+          "tp": 0,
+          "fp": 0,
+          "fn": 27,
+          "images_with_tp": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "threshold": 0.3,
+          "iou_threshold": 0.5
+        },
+        "paper_notebook": {
+          "targets": 0,
+          "tp": 0,
+          "fp": 7,
+          "fn": 0,
+          "images_with_tp": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "threshold": 0.45,
+          "iou_threshold": 0.5
+        },
+        "pencil_pouch_threshold_curve": [
+          {
+            "targets": 27,
+            "tp": 0,
+            "fp": 0,
+            "fn": 27,
+            "images_with_tp": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "threshold": 0.05,
+            "iou_threshold": 0.5
+          },
+          {
+            "targets": 27,
+            "tp": 0,
+            "fp": 0,
+            "fn": 27,
+            "images_with_tp": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "threshold": 0.1,
+            "iou_threshold": 0.5
+          },
+          {
+            "targets": 27,
+            "tp": 0,
+            "fp": 0,
+            "fn": 27,
+            "images_with_tp": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "threshold": 0.15,
+            "iou_threshold": 0.5
+          },
+          {
+            "targets": 27,
+            "tp": 0,
+            "fp": 0,
+            "fn": 27,
+            "images_with_tp": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "threshold": 0.2,
+            "iou_threshold": 0.5
+          },
+          {
+            "targets": 27,
+            "tp": 0,
+            "fp": 0,
+            "fn": 27,
+            "images_with_tp": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "threshold": 0.25,
+            "iou_threshold": 0.5
+          },
+          {
+            "targets": 27,
+            "tp": 0,
+            "fp": 0,
+            "fn": 27,
+            "images_with_tp": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "threshold": 0.3,
+            "iou_threshold": 0.5
+          },
+          {
+            "targets": 27,
+            "tp": 0,
+            "fp": 0,
+            "fn": 27,
+            "images_with_tp": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "threshold": 0.35,
+            "iou_threshold": 0.5
+          },
+          {
+            "targets": 27,
+            "tp": 0,
+            "fp": 0,
+            "fn": 27,
+            "images_with_tp": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "threshold": 0.4,
+            "iou_threshold": 0.5
+          },
+          {
+            "targets": 27,
+            "tp": 0,
+            "fp": 0,
+            "fn": 27,
+            "images_with_tp": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "threshold": 0.5,
+            "iou_threshold": 0.5
+          },
+          {
+            "targets": 27,
+            "tp": 0,
+            "fp": 0,
+            "fn": 27,
+            "images_with_tp": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "threshold": 0.6,
+            "iou_threshold": 0.5
+          }
+        ]
+      },
+      "original_pen_notebook_test_split": {
+        "pen": {
+          "targets": 94,
+          "tp": 51,
+          "fp": 22,
+          "fn": 43,
+          "images_with_tp": 41,
+          "precision": 0.6986301369863014,
+          "recall": 0.5425531914893617,
+          "threshold": 0.3,
+          "iou_threshold": 0.5
+        },
+        "pencil_pouch": {
+          "targets": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "images_with_tp": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "threshold": 0.3,
+          "iou_threshold": 0.5
+        },
+        "paper_notebook": {
+          "targets": 0,
+          "tp": 0,
+          "fp": 3,
+          "fn": 0,
+          "images_with_tp": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "threshold": 0.45,
+          "iou_threshold": 0.5
+        },
+        "pencil_pouch_threshold_curve": [
+          {
+            "targets": 0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "images_with_tp": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "threshold": 0.05,
+            "iou_threshold": 0.5
+          },
+          {
+            "targets": 0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "images_with_tp": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "threshold": 0.1,
+            "iou_threshold": 0.5
+          },
+          {
+            "targets": 0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "images_with_tp": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "threshold": 0.15,
+            "iou_threshold": 0.5
+          },
+          {
+            "targets": 0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "images_with_tp": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "threshold": 0.2,
+            "iou_threshold": 0.5
+          },
+          {
+            "targets": 0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "images_with_tp": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "threshold": 0.25,
+            "iou_threshold": 0.5
+          },
+          {
+            "targets": 0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "images_with_tp": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "threshold": 0.3,
+            "iou_threshold": 0.5
+          },
+          {
+            "targets": 0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "images_with_tp": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "threshold": 0.35,
+            "iou_threshold": 0.5
+          },
+          {
+            "targets": 0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "images_with_tp": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "threshold": 0.4,
+            "iou_threshold": 0.5
+          },
+          {
+            "targets": 0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "images_with_tp": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "threshold": 0.5,
+            "iou_threshold": 0.5
+          },
+          {
+            "targets": 0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "images_with_tp": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "threshold": 0.6,
+            "iou_threshold": 0.5
+          }
+        ]
+      }
+    },
+    "pouch_finetuned_full_oiv7_602": {
+      "pen_notebook_validation_base_images": {
+        "pen": {
+          "targets": 48,
+          "tp": 33,
+          "fp": 5,
+          "fn": 15,
+          "images_with_tp": 33,
+          "precision": 0.868421052631579,
+          "recall": 0.6875,
+          "threshold": 0.3,
+          "iou_threshold": 0.5
+        },
+        "pencil_pouch": {
+          "targets": 0,
+          "tp": 0,
+          "fp": 2,
+          "fn": 0,
+          "images_with_tp": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "threshold": 0.3,
+          "iou_threshold": 0.5
+        },
+        "paper_notebook": {
+          "targets": 23,
+          "tp": 18,
+          "fp": 4,
+          "fn": 5,
+          "images_with_tp": 18,
+          "precision": 0.8181818181818182,
+          "recall": 0.782608695652174,
+          "threshold": 0.45,
+          "iou_threshold": 0.5
+        }
+      },
+      "pouch_validation_same_item_session": {
+        "pen": {
+          "targets": 0,
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "images_with_tp": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "threshold": 0.3,
+          "iou_threshold": 0.5
+        },
+        "pencil_pouch": {
+          "targets": 27,
+          "tp": 23,
+          "fp": 0,
+          "fn": 4,
+          "images_with_tp": 23,
+          "precision": 1.0,
+          "recall": 0.8518518518518519,
+          "threshold": 0.3,
+          "iou_threshold": 0.5
+        },
+        "paper_notebook": {
+          "targets": 0,
+          "tp": 0,
+          "fp": 13,
+          "fn": 0,
+          "images_with_tp": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "threshold": 0.45,
+          "iou_threshold": 0.5
+        },
+        "pencil_pouch_threshold_curve": [
+          {
+            "targets": 27,
+            "tp": 26,
+            "fp": 0,
+            "fn": 1,
+            "images_with_tp": 26,
+            "precision": 1.0,
+            "recall": 0.9629629629629629,
+            "threshold": 0.05,
+            "iou_threshold": 0.5
+          },
+          {
+            "targets": 27,
+            "tp": 25,
+            "fp": 0,
+            "fn": 2,
+            "images_with_tp": 25,
+            "precision": 1.0,
+            "recall": 0.9259259259259259,
+            "threshold": 0.1,
+            "iou_threshold": 0.5
+          },
+          {
+            "targets": 27,
+            "tp": 25,
+            "fp": 0,
+            "fn": 2,
+            "images_with_tp": 25,
+            "precision": 1.0,
+            "recall": 0.9259259259259259,
+            "threshold": 0.15,
+            "iou_threshold": 0.5
+          },
+          {
+            "targets": 27,
+            "tp": 24,
+            "fp": 0,
+            "fn": 3,
+            "images_with_tp": 24,
+            "precision": 1.0,
+            "recall": 0.8888888888888888,
+            "threshold": 0.2,
+            "iou_threshold": 0.5
+          },
+          {
+            "targets": 27,
+            "tp": 23,
+            "fp": 0,
+            "fn": 4,
+            "images_with_tp": 23,
+            "precision": 1.0,
+            "recall": 0.8518518518518519,
+            "threshold": 0.25,
+            "iou_threshold": 0.5
+          },
+          {
+            "targets": 27,
+            "tp": 23,
+            "fp": 0,
+            "fn": 4,
+            "images_with_tp": 23,
+            "precision": 1.0,
+            "recall": 0.8518518518518519,
+            "threshold": 0.3,
+            "iou_threshold": 0.5
+          },
+          {
+            "targets": 27,
+            "tp": 23,
+            "fp": 0,
+            "fn": 4,
+            "images_with_tp": 23,
+            "precision": 1.0,
+            "recall": 0.8518518518518519,
+            "threshold": 0.35,
+            "iou_threshold": 0.5
+          },
+          {
+            "targets": 27,
+            "tp": 22,
+            "fp": 0,
+            "fn": 5,
+            "images_with_tp": 22,
+            "precision": 1.0,
+            "recall": 0.8148148148148148,
+            "threshold": 0.4,
+            "iou_threshold": 0.5
+          },
+          {
+            "targets": 27,
+            "tp": 20,
+            "fp": 0,
+            "fn": 7,
+            "images_with_tp": 20,
+            "precision": 1.0,
+            "recall": 0.7407407407407407,
+            "threshold": 0.5,
+            "iou_threshold": 0.5
+          },
+          {
+            "targets": 27,
+            "tp": 18,
+            "fp": 0,
+            "fn": 9,
+            "images_with_tp": 18,
+            "precision": 1.0,
+            "recall": 0.6666666666666666,
+            "threshold": 0.6,
+            "iou_threshold": 0.5
+          }
+        ]
+      },
+      "original_pen_notebook_test_split": {
+        "pen": {
+          "targets": 94,
+          "tp": 58,
+          "fp": 27,
+          "fn": 36,
+          "images_with_tp": 45,
+          "precision": 0.6823529411764706,
+          "recall": 0.6170212765957447,
+          "threshold": 0.3,
+          "iou_threshold": 0.5
+        },
+        "pencil_pouch": {
+          "targets": 0,
+          "tp": 0,
+          "fp": 4,
+          "fn": 0,
+          "images_with_tp": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "threshold": 0.3,
+          "iou_threshold": 0.5
+        },
+        "paper_notebook": {
+          "targets": 0,
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "images_with_tp": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "threshold": 0.45,
+          "iou_threshold": 0.5
+        },
+        "pencil_pouch_threshold_curve": [
+          {
+            "targets": 0,
+            "tp": 0,
+            "fp": 6,
+            "fn": 0,
+            "images_with_tp": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "threshold": 0.05,
+            "iou_threshold": 0.5
+          },
+          {
+            "targets": 0,
+            "tp": 0,
+            "fp": 6,
+            "fn": 0,
+            "images_with_tp": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "threshold": 0.1,
+            "iou_threshold": 0.5
+          },
+          {
+            "targets": 0,
+            "tp": 0,
+            "fp": 6,
+            "fn": 0,
+            "images_with_tp": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "threshold": 0.15,
+            "iou_threshold": 0.5
+          },
+          {
+            "targets": 0,
+            "tp": 0,
+            "fp": 5,
+            "fn": 0,
+            "images_with_tp": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "threshold": 0.2,
+            "iou_threshold": 0.5
+          },
+          {
+            "targets": 0,
+            "tp": 0,
+            "fp": 4,
+            "fn": 0,
+            "images_with_tp": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "threshold": 0.25,
+            "iou_threshold": 0.5
+          },
+          {
+            "targets": 0,
+            "tp": 0,
+            "fp": 4,
+            "fn": 0,
+            "images_with_tp": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "threshold": 0.3,
+            "iou_threshold": 0.5
+          },
+          {
+            "targets": 0,
+            "tp": 0,
+            "fp": 3,
+            "fn": 0,
+            "images_with_tp": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "threshold": 0.35,
+            "iou_threshold": 0.5
+          },
+          {
+            "targets": 0,
+            "tp": 0,
+            "fp": 3,
+            "fn": 0,
+            "images_with_tp": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "threshold": 0.4,
+            "iou_threshold": 0.5
+          },
+          {
+            "targets": 0,
+            "tp": 0,
+            "fp": 3,
+            "fn": 0,
+            "images_with_tp": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "threshold": 0.5,
+            "iou_threshold": 0.5
+          },
+          {
+            "targets": 0,
+            "tp": 0,
+            "fp": 2,
+            "fn": 0,
+            "images_with_tp": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "threshold": 0.6,
+            "iou_threshold": 0.5
+          }
+        ]
+      }
+    }
+  }
+}
