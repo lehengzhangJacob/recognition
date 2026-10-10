@@ -25,6 +25,18 @@ All counts below use greedy per-class box matching at IoU ≥ 0.50 and confidenc
 
 The 27 pouch validation photos are held out from training, but show the same physical pouch in the same photo session. These results measure performance on that photographed item/session and do not establish generalization to other pouch designs, lighting or settings. The original test split has no pouch positives, so its pouch counts only indicate false detections there. Pen and notebook evaluation remains based on the pre-existing splits; compare model results with these dataset and threshold limits in mind.
 
+
+## Forced three-way image classification
+
+For each image, take the highest raw model score for each of the three target classes across all candidate boxes, then choose the class with the highest score. No confidence threshold or box overlap requirement is applied. This measures the requested closed-set, image-level decision, assuming the image contains one of the three categories.
+
+| Dataset | YOLO correct / total | RF-DETR correct / total |
+|---|---:|---:|
+| Validation, one label per image (44 pen, 19 notebook, 27 pouch) | 78 / 90 (86.7%) | 89 / 90 (98.9%) |
+| Original test, pen-only images | 55 / 62 (88.7%) | 60 / 62 (96.8%) |
+
+Four validation images contain both a pen and a notebook, so they are excluded from the strict one-label denominator; both models chose one of the two annotated classes on all four. Three original test images have no annotated target; forced classification still assigns a category to them. On the single-label validation images, RF-DETR classified 44/44 pen, 18/19 notebook and 27/27 pouch. The one error was a notebook classified as pen. The pouch examples remain the same physical item and photo session, and the separate test set has no notebook or pouch positives. These figures do not establish ≥95% accuracy on new objects, backgrounds or real video. See `onnx_cpu_top1_3class.json` for image-level scores and `scripts/eval_pen_notebook_pouch_top1.py` for the exact procedure.
+
 ## Training provenance
 
 - YOLOv8n OIV7 602: initialized from the preceding full OIV7 pen/notebook run (`pen_notebook_full_oiv7_v9`), then fine-tuned for 30 epochs at 640px with the pouch annotations mapped to OIV7 `Pencil case`. See `yolov8n-oiv7-602/training_args.yaml` and the evaluation JSON.

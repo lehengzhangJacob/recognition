@@ -1,0 +1,4576 @@
+{
+  "rule": "For each image, take each target class's maximum raw model score across all candidates, then choose the class with the highest score. No confidence threshold or IoU requirement.",
+  "class_order": [
+    "pen",
+    "paper_notebook",
+    "pencil_pouch"
+  ],
+  "datasets": {
+    "validation_base": {
+      "single_label_images": 63,
+      "mixed_label_images": 4,
+      "empty_label_images": 0,
+      "models": {
+        "yolo": {
+          "correct": 53,
+          "total": 63,
+          "accuracy": 0.8412698412698413,
+          "confusion": {
+            "pen": {
+              "pen": 37,
+              "paper_notebook": 5,
+              "pencil_pouch": 2
+            },
+            "paper_notebook": {
+              "pen": 2,
+              "paper_notebook": 16,
+              "pencil_pouch": 1
+            },
+            "pencil_pouch": {
+              "pen": 0,
+              "paper_notebook": 0,
+              "pencil_pouch": 0
+            }
+          },
+          "mixed_top1_matches_any_label": 4,
+          "empty_forced_choice": {},
+          "wrong_images": [
+            {
+              "file": "base_user_notebook_nb2_070.jpg",
+              "truth": "paper_notebook",
+              "top1": "pen",
+              "scores": {
+                "pen": 0.7528173923492432,
+                "paper_notebook": 0.096904456615448,
+                "pencil_pouch": 0.6740150451660156
+              }
+            },
+            {
+              "file": "base_user_notebook_nb_010.jpg",
+              "truth": "paper_notebook",
+              "top1": "pen",
+              "scores": {
+                "pen": 0.09814727306365967,
+                "paper_notebook": 0.03689783811569214,
+                "pencil_pouch": 0.017484277486801147
+              }
+            },
+            {
+              "file": "base_user_notebook_nb_102.jpg",
+              "truth": "paper_notebook",
+              "top1": "pencil_pouch",
+              "scores": {
+                "pen": 0.0014286041259765625,
+                "paper_notebook": 0.638735294342041,
+                "pencil_pouch": 0.7303657531738281
+              }
+            },
+            {
+              "file": "base_user_pen_p2_121.jpg",
+              "truth": "pen",
+              "top1": "pencil_pouch",
+              "scores": {
+                "pen": 0.3368082642555237,
+                "paper_notebook": 0.00270688533782959,
+                "pencil_pouch": 0.6870909929275513
+              }
+            },
+            {
+              "file": "base_user_pen_p2_125.jpg",
+              "truth": "pen",
+              "top1": "pencil_pouch",
+              "scores": {
+                "pen": 0.47587934136390686,
+                "paper_notebook": 0.11111810803413391,
+                "pencil_pouch": 0.8567777872085571
+              }
+            },
+            {
+              "file": "base_user_pen_pen_007.jpg",
+              "truth": "pen",
+              "top1": "paper_notebook",
+              "scores": {
+                "pen": 0.0814715325832367,
+                "paper_notebook": 0.1808706820011139,
+                "pencil_pouch": 0.015089243650436401
+              }
+            },
+            {
+              "file": "base_user_pen_pen_012.jpg",
+              "truth": "pen",
+              "top1": "paper_notebook",
+              "scores": {
+                "pen": 0.20245090126991272,
+                "paper_notebook": 0.3371172249317169,
+                "pencil_pouch": 0.028131067752838135
+              }
+            },
+            {
+              "file": "base_user_pen_pen_013.jpg",
+              "truth": "pen",
+              "top1": "paper_notebook",
+              "scores": {
+                "pen": 0.225193589925766,
+                "paper_notebook": 0.29936325550079346,
+                "pencil_pouch": 0.0211942195892334
+              }
+            },
+            {
+              "file": "base_user_pen_pen_014.jpg",
+              "truth": "pen",
+              "top1": "paper_notebook",
+              "scores": {
+                "pen": 0.13198888301849365,
+                "paper_notebook": 0.6224855184555054,
+                "pencil_pouch": 0.3114469051361084
+              }
+            },
+            {
+              "file": "base_user_pen_pen_022.jpg",
+              "truth": "pen",
+              "top1": "paper_notebook",
+              "scores": {
+                "pen": 0.007584184408187866,
+                "paper_notebook": 0.5762499570846558,
+                "pencil_pouch": 0.05573341250419617
+              }
+            }
+          ]
+        },
+        "rfdetr": {
+          "correct": 62,
+          "total": 63,
+          "accuracy": 0.9841269841269841,
+          "confusion": {
+            "pen": {
+              "pen": 44,
+              "paper_notebook": 0,
+              "pencil_pouch": 0
+            },
+            "paper_notebook": {
+              "pen": 1,
+              "paper_notebook": 18,
+              "pencil_pouch": 0
+            },
+            "pencil_pouch": {
+              "pen": 0,
+              "paper_notebook": 0,
+              "pencil_pouch": 0
+            }
+          },
+          "mixed_top1_matches_any_label": 4,
+          "empty_forced_choice": {},
+          "wrong_images": [
+            {
+              "file": "base_user_notebook_nb2_070.jpg",
+              "truth": "paper_notebook",
+              "top1": "pen",
+              "scores": {
+                "pen": 0.5527833700180054,
+                "paper_notebook": 0.07328415662050247,
+                "pencil_pouch": 0.1481911838054657
+              }
+            }
+          ]
+        }
+      }
+    },
+    "validation_pouch_same_item_session": {
+      "single_label_images": 27,
+      "mixed_label_images": 0,
+      "empty_label_images": 0,
+      "models": {
+        "yolo": {
+          "correct": 25,
+          "total": 27,
+          "accuracy": 0.9259259259259259,
+          "confusion": {
+            "pen": {
+              "pen": 0,
+              "paper_notebook": 0,
+              "pencil_pouch": 0
+            },
+            "paper_notebook": {
+              "pen": 0,
+              "paper_notebook": 0,
+              "pencil_pouch": 0
+            },
+            "pencil_pouch": {
+              "pen": 1,
+              "paper_notebook": 1,
+              "pencil_pouch": 25
+            }
+          },
+          "mixed_top1_matches_any_label": 0,
+          "empty_forced_choice": {},
+          "wrong_images": [
+            {
+              "file": "pouch_pencil_pouch_048.jpg",
+              "truth": "pencil_pouch",
+              "top1": "pen",
+              "scores": {
+                "pen": 0.6783883571624756,
+                "paper_notebook": 0.00876578688621521,
+                "pencil_pouch": 0.2498542070388794
+              }
+            },
+            {
+              "file": "pouch_pencil_pouch_133.jpg",
+              "truth": "pencil_pouch",
+              "top1": "paper_notebook",
+              "scores": {
+                "pen": 0.03596091270446777,
+                "paper_notebook": 0.8527505993843079,
+                "pencil_pouch": 0.6084577441215515
+              }
+            }
+          ]
+        },
+        "rfdetr": {
+          "correct": 27,
+          "total": 27,
+          "accuracy": 1.0,
+          "confusion": {
+            "pen": {
+              "pen": 0,
+              "paper_notebook": 0,
+              "pencil_pouch": 0
+            },
+            "paper_notebook": {
+              "pen": 0,
+              "paper_notebook": 0,
+              "pencil_pouch": 0
+            },
+            "pencil_pouch": {
+              "pen": 0,
+              "paper_notebook": 0,
+              "pencil_pouch": 27
+            }
+          },
+          "mixed_top1_matches_any_label": 0,
+          "empty_forced_choice": {},
+          "wrong_images": []
+        }
+      }
+    },
+    "validation_all": {
+      "single_label_images": 90,
+      "mixed_label_images": 4,
+      "empty_label_images": 0,
+      "models": {
+        "yolo": {
+          "correct": 78,
+          "total": 90,
+          "accuracy": 0.8666666666666667,
+          "confusion": {
+            "pen": {
+              "pen": 37,
+              "paper_notebook": 5,
+              "pencil_pouch": 2
+            },
+            "paper_notebook": {
+              "pen": 2,
+              "paper_notebook": 16,
+              "pencil_pouch": 1
+            },
+            "pencil_pouch": {
+              "pen": 1,
+              "paper_notebook": 1,
+              "pencil_pouch": 25
+            }
+          },
+          "mixed_top1_matches_any_label": 4,
+          "empty_forced_choice": {},
+          "wrong_images": [
+            {
+              "file": "base_user_notebook_nb2_070.jpg",
+              "truth": "paper_notebook",
+              "top1": "pen",
+              "scores": {
+                "pen": 0.7528173923492432,
+                "paper_notebook": 0.096904456615448,
+                "pencil_pouch": 0.6740150451660156
+              }
+            },
+            {
+              "file": "base_user_notebook_nb_010.jpg",
+              "truth": "paper_notebook",
+              "top1": "pen",
+              "scores": {
+                "pen": 0.09814727306365967,
+                "paper_notebook": 0.03689783811569214,
+                "pencil_pouch": 0.017484277486801147
+              }
+            },
+            {
+              "file": "base_user_notebook_nb_102.jpg",
+              "truth": "paper_notebook",
+              "top1": "pencil_pouch",
+              "scores": {
+                "pen": 0.0014286041259765625,
+                "paper_notebook": 0.638735294342041,
+                "pencil_pouch": 0.7303657531738281
+              }
+            },
+            {
+              "file": "base_user_pen_p2_121.jpg",
+              "truth": "pen",
+              "top1": "pencil_pouch",
+              "scores": {
+                "pen": 0.3368082642555237,
+                "paper_notebook": 0.00270688533782959,
+                "pencil_pouch": 0.6870909929275513
+              }
+            },
+            {
+              "file": "base_user_pen_p2_125.jpg",
+              "truth": "pen",
+              "top1": "pencil_pouch",
+              "scores": {
+                "pen": 0.47587934136390686,
+                "paper_notebook": 0.11111810803413391,
+                "pencil_pouch": 0.8567777872085571
+              }
+            },
+            {
+              "file": "base_user_pen_pen_007.jpg",
+              "truth": "pen",
+              "top1": "paper_notebook",
+              "scores": {
+                "pen": 0.0814715325832367,
+                "paper_notebook": 0.1808706820011139,
+                "pencil_pouch": 0.015089243650436401
+              }
+            },
+            {
+              "file": "base_user_pen_pen_012.jpg",
+              "truth": "pen",
+              "top1": "paper_notebook",
+              "scores": {
+                "pen": 0.20245090126991272,
+                "paper_notebook": 0.3371172249317169,
+                "pencil_pouch": 0.028131067752838135
+              }
+            },
+            {
+              "file": "base_user_pen_pen_013.jpg",
+              "truth": "pen",
+              "top1": "paper_notebook",
+              "scores": {
+                "pen": 0.225193589925766,
+                "paper_notebook": 0.29936325550079346,
+                "pencil_pouch": 0.0211942195892334
+              }
+            },
+            {
+              "file": "base_user_pen_pen_014.jpg",
+              "truth": "pen",
+              "top1": "paper_notebook",
+              "scores": {
+                "pen": 0.13198888301849365,
+                "paper_notebook": 0.6224855184555054,
+                "pencil_pouch": 0.3114469051361084
+              }
+            },
+            {
+              "file": "base_user_pen_pen_022.jpg",
+              "truth": "pen",
+              "top1": "paper_notebook",
+              "scores": {
+                "pen": 0.007584184408187866,
+                "paper_notebook": 0.5762499570846558,
+                "pencil_pouch": 0.05573341250419617
+              }
+            },
+            {
+              "file": "pouch_pencil_pouch_048.jpg",
+              "truth": "pencil_pouch",
+              "top1": "pen",
+              "scores": {
+                "pen": 0.6783883571624756,
+                "paper_notebook": 0.00876578688621521,
+                "pencil_pouch": 0.2498542070388794
+              }
+            },
+            {
+              "file": "pouch_pencil_pouch_133.jpg",
+              "truth": "pencil_pouch",
+              "top1": "paper_notebook",
+              "scores": {
+                "pen": 0.03596091270446777,
+                "paper_notebook": 0.8527505993843079,
+                "pencil_pouch": 0.6084577441215515
+              }
+            }
+          ]
+        },
+        "rfdetr": {
+          "correct": 89,
+          "total": 90,
+          "accuracy": 0.9888888888888889,
+          "confusion": {
+            "pen": {
+              "pen": 44,
+              "paper_notebook": 0,
+              "pencil_pouch": 0
+            },
+            "paper_notebook": {
+              "pen": 1,
+              "paper_notebook": 18,
+              "pencil_pouch": 0
+            },
+            "pencil_pouch": {
+              "pen": 0,
+              "paper_notebook": 0,
+              "pencil_pouch": 27
+            }
+          },
+          "mixed_top1_matches_any_label": 4,
+          "empty_forced_choice": {},
+          "wrong_images": [
+            {
+              "file": "base_user_notebook_nb2_070.jpg",
+              "truth": "paper_notebook",
+              "top1": "pen",
+              "scores": {
+                "pen": 0.5527833700180054,
+                "paper_notebook": 0.07328415662050247,
+                "pencil_pouch": 0.1481911838054657
+              }
+            }
+          ]
+        }
+      }
+    },
+    "original_test": {
+      "single_label_images": 62,
+      "mixed_label_images": 0,
+      "empty_label_images": 3,
+      "models": {
+        "yolo": {
+          "correct": 55,
+          "total": 62,
+          "accuracy": 0.8870967741935484,
+          "confusion": {
+            "pen": {
+              "pen": 55,
+              "paper_notebook": 3,
+              "pencil_pouch": 4
+            },
+            "paper_notebook": {
+              "pen": 0,
+              "paper_notebook": 0,
+              "pencil_pouch": 0
+            },
+            "pencil_pouch": {
+              "pen": 0,
+              "paper_notebook": 0,
+              "pencil_pouch": 0
+            }
+          },
+          "mixed_top1_matches_any_label": 0,
+          "empty_forced_choice": {
+            "pen": 2,
+            "paper_notebook": 1
+          },
+          "wrong_images": [
+            {
+              "file": "base_reviewed_public_no_notebook_lvis_224541.jpg",
+              "truth": "pen",
+              "top1": "paper_notebook",
+              "scores": {
+                "pen": 0.27427661418914795,
+                "paper_notebook": 0.38851630687713623,
+                "pencil_pouch": 0.08072781562805176
+              }
+            },
+            {
+              "file": "base_reviewed_public_no_notebook_oi_train_0075ba55bbacfe2c.jpg",
+              "truth": "pen",
+              "top1": "pencil_pouch",
+              "scores": {
+                "pen": 0.7035564184188843,
+                "paper_notebook": 0.3591233491897583,
+                "pencil_pouch": 0.855470597743988
+              }
+            },
+            {
+              "file": "base_reviewed_public_no_notebook_oi_train_1f621afa12caa990.jpg",
+              "truth": "pen",
+              "top1": "paper_notebook",
+              "scores": {
+                "pen": 0.1356385350227356,
+                "paper_notebook": 0.2048899233341217,
+                "pencil_pouch": 0.037304461002349854
+              }
+            },
+            {
+              "file": "base_reviewed_public_no_notebook_oi_train_26769479b56b6f77.jpg",
+              "truth": "pen",
+              "top1": "pencil_pouch",
+              "scores": {
+                "pen": 0.3751981854438782,
+                "paper_notebook": 0.04700767993927002,
+                "pencil_pouch": 0.7903624176979065
+              }
+            },
+            {
+              "file": "base_reviewed_public_no_notebook_oi_train_89c0802ec31e8ae9.jpg",
+              "truth": "pen",
+              "top1": "pencil_pouch",
+              "scores": {
+                "pen": 0.6062922477722168,
+                "paper_notebook": 0.01626148819923401,
+                "pencil_pouch": 0.6810398101806641
+              }
+            },
+            {
+              "file": "base_reviewed_public_no_notebook_oi_train_942aec33bfd9c4d5.jpg",
+              "truth": "pen",
+              "top1": "paper_notebook",
+              "scores": {
+                "pen": 0.23364809155464172,
+                "paper_notebook": 0.38364696502685547,
+                "pencil_pouch": 0.03742888569831848
+              }
+            },
+            {
+              "file": "base_reviewed_public_no_notebook_oi_validation_e7bf630c163e9cbe.jpg",
+              "truth": "pen",
+              "top1": "pencil_pouch",
+              "scores": {
+                "pen": 0.5182159543037415,
+                "paper_notebook": 0.1280345320701599,
+                "pencil_pouch": 0.5338638424873352
+              }
+            }
+          ]
+        },
+        "rfdetr": {
+          "correct": 60,
+          "total": 62,
+          "accuracy": 0.967741935483871,
+          "confusion": {
+            "pen": {
+              "pen": 60,
+              "paper_notebook": 1,
+              "pencil_pouch": 1
+            },
+            "paper_notebook": {
+              "pen": 0,
+              "paper_notebook": 0,
+              "pencil_pouch": 0
+            },
+            "pencil_pouch": {
+              "pen": 0,
+              "paper_notebook": 0,
+              "pencil_pouch": 0
+            }
+          },
+          "mixed_top1_matches_any_label": 0,
+          "empty_forced_choice": {
+            "pen": 2,
+            "pencil_pouch": 1
+          },
+          "wrong_images": [
+            {
+              "file": "base_reviewed_public_no_notebook_oi_train_c271c33e20533d2c.jpg",
+              "truth": "pen",
+              "top1": "pencil_pouch",
+              "scores": {
+                "pen": 0.4267852306365967,
+                "paper_notebook": 0.01372947171330452,
+                "pencil_pouch": 0.49609139561653137
+              }
+            },
+            {
+              "file": "base_reviewed_public_no_notebook_oi_train_f1597de5376cc653.jpg",
+              "truth": "pen",
+              "top1": "paper_notebook",
+              "scores": {
+                "pen": 0.18018947541713715,
+                "paper_notebook": 0.6482529044151306,
+                "pencil_pouch": 0.08834586292505264
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "rows": [
+    {
+      "split": "valid",
+      "file": "base_user_notebook_nb2_010.jpg",
+      "truth": [
+        "paper_notebook"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "paper_notebook",
+          "scores": {
+            "pen": 0.006039649248123169,
+            "paper_notebook": 0.8885902166366577,
+            "pencil_pouch": 0.0235862135887146
+          }
+        },
+        "rfdetr": {
+          "top1": "paper_notebook",
+          "scores": {
+            "pen": 0.056626688688993454,
+            "paper_notebook": 0.950761616230011,
+            "pencil_pouch": 0.013697289861738682
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_notebook_nb2_030.jpg",
+      "truth": [
+        "paper_notebook"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "paper_notebook",
+          "scores": {
+            "pen": 0.006849169731140137,
+            "paper_notebook": 0.9394663572311401,
+            "pencil_pouch": 0.1549319624900818
+          }
+        },
+        "rfdetr": {
+          "top1": "paper_notebook",
+          "scores": {
+            "pen": 0.04504050314426422,
+            "paper_notebook": 0.9804539084434509,
+            "pencil_pouch": 0.03830363228917122
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_notebook_nb2_050.jpg",
+      "truth": [
+        "pen",
+        "paper_notebook"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "paper_notebook",
+          "scores": {
+            "pen": 0.8148432970046997,
+            "paper_notebook": 0.926854133605957,
+            "pencil_pouch": 0.04150328040122986
+          }
+        },
+        "rfdetr": {
+          "top1": "paper_notebook",
+          "scores": {
+            "pen": 0.6889565587043762,
+            "paper_notebook": 0.9629368782043457,
+            "pencil_pouch": 0.01943558268249035
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_notebook_nb2_070.jpg",
+      "truth": [
+        "paper_notebook"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7528173923492432,
+            "paper_notebook": 0.096904456615448,
+            "pencil_pouch": 0.6740150451660156
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.5527833700180054,
+            "paper_notebook": 0.07328415662050247,
+            "pencil_pouch": 0.1481911838054657
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_notebook_nb2_090.jpg",
+      "truth": [
+        "paper_notebook"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "paper_notebook",
+          "scores": {
+            "pen": 0.16359716653823853,
+            "paper_notebook": 0.7356885671615601,
+            "pencil_pouch": 0.4234238266944885
+          }
+        },
+        "rfdetr": {
+          "top1": "paper_notebook",
+          "scores": {
+            "pen": 0.058008067309856415,
+            "paper_notebook": 0.9331080913543701,
+            "pencil_pouch": 0.012014582753181458
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_notebook_nb2_110.jpg",
+      "truth": [
+        "paper_notebook"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "paper_notebook",
+          "scores": {
+            "pen": 0.0017487108707427979,
+            "paper_notebook": 0.864223837852478,
+            "pencil_pouch": 0.04371523857116699
+          }
+        },
+        "rfdetr": {
+          "top1": "paper_notebook",
+          "scores": {
+            "pen": 0.021035658195614815,
+            "paper_notebook": 0.9324414730072021,
+            "pencil_pouch": 0.01134197786450386
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_notebook_nb2_130.jpg",
+      "truth": [
+        "paper_notebook"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "paper_notebook",
+          "scores": {
+            "pen": 0.00220566987991333,
+            "paper_notebook": 0.8508744835853577,
+            "pencil_pouch": 0.10837438702583313
+          }
+        },
+        "rfdetr": {
+          "top1": "paper_notebook",
+          "scores": {
+            "pen": 0.027865450829267502,
+            "paper_notebook": 0.954838752746582,
+            "pencil_pouch": 0.006089372094720602
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_notebook_nb2_150.jpg",
+      "truth": [
+        "paper_notebook"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "paper_notebook",
+          "scores": {
+            "pen": 0.12384691834449768,
+            "paper_notebook": 0.8957974910736084,
+            "pencil_pouch": 0.12925148010253906
+          }
+        },
+        "rfdetr": {
+          "top1": "paper_notebook",
+          "scores": {
+            "pen": 0.01892930269241333,
+            "paper_notebook": 0.948341965675354,
+            "pencil_pouch": 0.010828188620507717
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_notebook_nb_000.jpg",
+      "truth": [
+        "paper_notebook"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "paper_notebook",
+          "scores": {
+            "pen": 0.009185761213302612,
+            "paper_notebook": 0.6902701258659363,
+            "pencil_pouch": 0.04487946629524231
+          }
+        },
+        "rfdetr": {
+          "top1": "paper_notebook",
+          "scores": {
+            "pen": 0.02494753710925579,
+            "paper_notebook": 0.8848108649253845,
+            "pencil_pouch": 0.026711564511060715
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_notebook_nb_010.jpg",
+      "truth": [
+        "paper_notebook"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.09814727306365967,
+            "paper_notebook": 0.03689783811569214,
+            "pencil_pouch": 0.017484277486801147
+          }
+        },
+        "rfdetr": {
+          "top1": "paper_notebook",
+          "scores": {
+            "pen": 0.12319737672805786,
+            "paper_notebook": 0.9126310348510742,
+            "pencil_pouch": 0.012498142197728157
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_notebook_nb_020.jpg",
+      "truth": [
+        "paper_notebook"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "paper_notebook",
+          "scores": {
+            "pen": 0.004044920206069946,
+            "paper_notebook": 0.6312551498413086,
+            "pencil_pouch": 0.31142300367355347
+          }
+        },
+        "rfdetr": {
+          "top1": "paper_notebook",
+          "scores": {
+            "pen": 0.02774408645927906,
+            "paper_notebook": 0.9178830981254578,
+            "pencil_pouch": 0.014722165651619434
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_notebook_nb_033.jpg",
+      "truth": [
+        "paper_notebook"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "paper_notebook",
+          "scores": {
+            "pen": 0.014505505561828613,
+            "paper_notebook": 0.8914701342582703,
+            "pencil_pouch": 0.05973920226097107
+          }
+        },
+        "rfdetr": {
+          "top1": "paper_notebook",
+          "scores": {
+            "pen": 0.01216163206845522,
+            "paper_notebook": 0.9543195366859436,
+            "pencil_pouch": 0.011613058857619762
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_notebook_nb_045.jpg",
+      "truth": [
+        "paper_notebook"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "paper_notebook",
+          "scores": {
+            "pen": 0.026675403118133545,
+            "paper_notebook": 0.823833703994751,
+            "pencil_pouch": 0.13933050632476807
+          }
+        },
+        "rfdetr": {
+          "top1": "paper_notebook",
+          "scores": {
+            "pen": 0.03892046585679054,
+            "paper_notebook": 0.8533836007118225,
+            "pencil_pouch": 0.09294486790895462
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_notebook_nb_055.jpg",
+      "truth": [
+        "paper_notebook"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "paper_notebook",
+          "scores": {
+            "pen": 0.30748432874679565,
+            "paper_notebook": 0.6802000999450684,
+            "pencil_pouch": 0.3920056223869324
+          }
+        },
+        "rfdetr": {
+          "top1": "paper_notebook",
+          "scores": {
+            "pen": 0.05070851743221283,
+            "paper_notebook": 0.9482372999191284,
+            "pencil_pouch": 0.031126083806157112
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_notebook_nb_068.jpg",
+      "truth": [
+        "paper_notebook"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "paper_notebook",
+          "scores": {
+            "pen": 0.0057485103607177734,
+            "paper_notebook": 0.900608241558075,
+            "pencil_pouch": 0.04422011971473694
+          }
+        },
+        "rfdetr": {
+          "top1": "paper_notebook",
+          "scores": {
+            "pen": 0.07189308106899261,
+            "paper_notebook": 0.9539209008216858,
+            "pencil_pouch": 0.004663106054067612
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_notebook_nb_078.jpg",
+      "truth": [
+        "paper_notebook"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "paper_notebook",
+          "scores": {
+            "pen": 0.007055342197418213,
+            "paper_notebook": 0.9506959915161133,
+            "pencil_pouch": 0.07339370250701904
+          }
+        },
+        "rfdetr": {
+          "top1": "paper_notebook",
+          "scores": {
+            "pen": 0.01524152047932148,
+            "paper_notebook": 0.977253258228302,
+            "pencil_pouch": 0.003792335046455264
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_notebook_nb_090.jpg",
+      "truth": [
+        "paper_notebook"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "paper_notebook",
+          "scores": {
+            "pen": 0.15886190533638,
+            "paper_notebook": 0.8580952286720276,
+            "pencil_pouch": 0.033691614866256714
+          }
+        },
+        "rfdetr": {
+          "top1": "paper_notebook",
+          "scores": {
+            "pen": 0.03308070823550224,
+            "paper_notebook": 0.900796115398407,
+            "pencil_pouch": 0.08813106268644333
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_notebook_nb_102.jpg",
+      "truth": [
+        "paper_notebook"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.0014286041259765625,
+            "paper_notebook": 0.638735294342041,
+            "pencil_pouch": 0.7303657531738281
+          }
+        },
+        "rfdetr": {
+          "top1": "paper_notebook",
+          "scores": {
+            "pen": 0.01273306179791689,
+            "paper_notebook": 0.9757125973701477,
+            "pencil_pouch": 0.002845465438440442
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_notebook_nb_115.jpg",
+      "truth": [
+        "paper_notebook"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "paper_notebook",
+          "scores": {
+            "pen": 0.016912996768951416,
+            "paper_notebook": 0.7859110832214355,
+            "pencil_pouch": 0.25034230947494507
+          }
+        },
+        "rfdetr": {
+          "top1": "paper_notebook",
+          "scores": {
+            "pen": 0.3255276381969452,
+            "paper_notebook": 0.5177810192108154,
+            "pencil_pouch": 0.03183192014694214
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_notebook_nb_126.jpg",
+      "truth": [
+        "paper_notebook"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "paper_notebook",
+          "scores": {
+            "pen": 0.0006202459335327148,
+            "paper_notebook": 0.9222497940063477,
+            "pencil_pouch": 0.10766687989234924
+          }
+        },
+        "rfdetr": {
+          "top1": "paper_notebook",
+          "scores": {
+            "pen": 0.012913402169942856,
+            "paper_notebook": 0.9297367930412292,
+            "pencil_pouch": 0.012588422745466232
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_pen_p2_107.jpg",
+      "truth": [
+        "pen",
+        "paper_notebook"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7871639728546143,
+            "paper_notebook": 0.055873095989227295,
+            "pencil_pouch": 0.025318115949630737
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7904096841812134,
+            "paper_notebook": 0.3215728998184204,
+            "pencil_pouch": 0.016207851469516754
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_pen_p2_108.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.3489956557750702,
+            "paper_notebook": 0.00014600157737731934,
+            "pencil_pouch": 0.003436863422393799
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.5305964946746826,
+            "paper_notebook": 0.017471782863140106,
+            "pencil_pouch": 0.03015890158712864
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_pen_p2_109.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.8295977115631104,
+            "paper_notebook": 1.3500452041625977e-05,
+            "pencil_pouch": 0.0019266009330749512
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7385832071304321,
+            "paper_notebook": 0.0038817652966827154,
+            "pencil_pouch": 0.01064216811209917
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_pen_p2_110.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.820445716381073,
+            "paper_notebook": 4.2319297790527344e-05,
+            "pencil_pouch": 0.0018181800842285156
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7991291880607605,
+            "paper_notebook": 0.036007773131132126,
+            "pencil_pouch": 0.01748817041516304
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_pen_p2_112.jpg",
+      "truth": [
+        "pen",
+        "paper_notebook"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.6561994552612305,
+            "paper_notebook": 0.013005644083023071,
+            "pencil_pouch": 0.01760992407798767
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.8348363637924194,
+            "paper_notebook": 0.2540953755378723,
+            "pencil_pouch": 0.014028220437467098
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_pen_p2_114.jpg",
+      "truth": [
+        "pen",
+        "paper_notebook"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7773550152778625,
+            "paper_notebook": 0.01234099268913269,
+            "pencil_pouch": 0.005188703536987305
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.8478524684906006,
+            "paper_notebook": 0.17578008770942688,
+            "pencil_pouch": 0.008957148529589176
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_pen_p2_121.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.3368082642555237,
+            "paper_notebook": 0.00270688533782959,
+            "pencil_pouch": 0.6870909929275513
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7329273223876953,
+            "paper_notebook": 0.00804881565272808,
+            "pencil_pouch": 0.014020603150129318
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_pen_p2_123.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.47044768929481506,
+            "paper_notebook": 0.0037998855113983154,
+            "pencil_pouch": 0.4214850962162018
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.6775594353675842,
+            "paper_notebook": 0.10168252885341644,
+            "pencil_pouch": 0.013825257308781147
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_pen_p2_125.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.47587934136390686,
+            "paper_notebook": 0.11111810803413391,
+            "pencil_pouch": 0.8567777872085571
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.6229897737503052,
+            "paper_notebook": 0.06456873565912247,
+            "pencil_pouch": 0.010128193534910679
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_pen_p2_127.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.8586231470108032,
+            "paper_notebook": 0.0032905638217926025,
+            "pencil_pouch": 0.027229100465774536
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.6442654728889465,
+            "paper_notebook": 0.011778797954320908,
+            "pencil_pouch": 0.013002614490687847
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_pen_p2_129.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7242318987846375,
+            "paper_notebook": 0.0032136142253875732,
+            "pencil_pouch": 0.123037189245224
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7406222820281982,
+            "paper_notebook": 0.023883825168013573,
+            "pencil_pouch": 0.00897184293717146
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_pen_p2_131.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.19700941443443298,
+            "paper_notebook": 0.07787153124809265,
+            "pencil_pouch": 0.08508914709091187
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7309035658836365,
+            "paper_notebook": 0.031834762543439865,
+            "pencil_pouch": 0.013597287237644196
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_pen_pen_001.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.6969651579856873,
+            "paper_notebook": 0.003051161766052246,
+            "pencil_pouch": 0.025763750076293945
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.8363354206085205,
+            "paper_notebook": 0.03366827219724655,
+            "pencil_pouch": 0.036928825080394745
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_pen_pen_002.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7158763408660889,
+            "paper_notebook": 0.001605004072189331,
+            "pencil_pouch": 0.03280031681060791
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.8224582076072693,
+            "paper_notebook": 0.039889223873615265,
+            "pencil_pouch": 0.10328281670808792
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_pen_pen_003.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7849779725074768,
+            "paper_notebook": 0.012464582920074463,
+            "pencil_pouch": 0.027417808771133423
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.8521400094032288,
+            "paper_notebook": 0.13325141370296478,
+            "pencil_pouch": 0.028318902477622032
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_pen_pen_004.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.15174439549446106,
+            "paper_notebook": 0.05371323227882385,
+            "pencil_pouch": 0.03683653473854065
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.6499423384666443,
+            "paper_notebook": 0.032472074031829834,
+            "pencil_pouch": 0.03586180508136749
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_pen_pen_005.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.21342071890830994,
+            "paper_notebook": 0.02231121063232422,
+            "pencil_pouch": 0.013030052185058594
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.6390164494514465,
+            "paper_notebook": 0.027348030358552933,
+            "pencil_pouch": 0.024277115240693092
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_pen_pen_006.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.749860942363739,
+            "paper_notebook": 0.6287573575973511,
+            "pencil_pouch": 0.2030971646308899
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.829933762550354,
+            "paper_notebook": 0.05220148712396622,
+            "pencil_pouch": 0.06427428126335144
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_pen_pen_007.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "paper_notebook",
+          "scores": {
+            "pen": 0.0814715325832367,
+            "paper_notebook": 0.1808706820011139,
+            "pencil_pouch": 0.015089243650436401
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.5515164136886597,
+            "paper_notebook": 0.08251623064279556,
+            "pencil_pouch": 0.02061319351196289
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_pen_pen_008.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.8210225105285645,
+            "paper_notebook": 0.5350149273872375,
+            "pencil_pouch": 0.09544846415519714
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.13092444837093353,
+            "paper_notebook": 0.10326612740755081,
+            "pencil_pouch": 0.045286625623703
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_pen_pen_009.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.845563530921936,
+            "paper_notebook": 0.013452500104904175,
+            "pencil_pouch": 0.015045970678329468
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.8628717660903931,
+            "paper_notebook": 0.02678840607404709,
+            "pencil_pouch": 0.014470512978732586
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_pen_pen_010.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.5237993001937866,
+            "paper_notebook": 0.04450824856758118,
+            "pencil_pouch": 0.012982428073883057
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7904108762741089,
+            "paper_notebook": 0.05300621688365936,
+            "pencil_pouch": 0.02583494409918785
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_pen_pen_011.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.0331246554851532,
+            "paper_notebook": 0.008685380220413208,
+            "pencil_pouch": 0.010015666484832764
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.5924440622329712,
+            "paper_notebook": 0.043321944773197174,
+            "pencil_pouch": 0.02477862313389778
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_pen_pen_012.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "paper_notebook",
+          "scores": {
+            "pen": 0.20245090126991272,
+            "paper_notebook": 0.3371172249317169,
+            "pencil_pouch": 0.028131067752838135
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.6806977987289429,
+            "paper_notebook": 0.022150419652462006,
+            "pencil_pouch": 0.03391953185200691
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_pen_pen_013.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "paper_notebook",
+          "scores": {
+            "pen": 0.225193589925766,
+            "paper_notebook": 0.29936325550079346,
+            "pencil_pouch": 0.0211942195892334
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.6522486805915833,
+            "paper_notebook": 0.04562924802303314,
+            "pencil_pouch": 0.032436344772577286
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_pen_pen_014.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "paper_notebook",
+          "scores": {
+            "pen": 0.13198888301849365,
+            "paper_notebook": 0.6224855184555054,
+            "pencil_pouch": 0.3114469051361084
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.5526136755943298,
+            "paper_notebook": 0.04479438439011574,
+            "pencil_pouch": 0.08910513669252396
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_pen_pen_015.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.2603474259376526,
+            "paper_notebook": 0.22725507616996765,
+            "pencil_pouch": 0.02998596429824829
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.6192130446434021,
+            "paper_notebook": 0.048663921654224396,
+            "pencil_pouch": 0.05628538876771927
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_pen_pen_016.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7775708436965942,
+            "paper_notebook": 0.012507140636444092,
+            "pencil_pouch": 0.02201533317565918
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.811575710773468,
+            "paper_notebook": 0.029533276334404945,
+            "pencil_pouch": 0.04659494385123253
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_pen_pen_017.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.836452305316925,
+            "paper_notebook": 0.0051055848598480225,
+            "pencil_pouch": 0.006134092807769775
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.8186187148094177,
+            "paper_notebook": 0.024259081110358238,
+            "pencil_pouch": 0.054049473255872726
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_pen_pen_018.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.3877623379230499,
+            "paper_notebook": 0.13927975296974182,
+            "pencil_pouch": 0.05938905477523804
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7433903217315674,
+            "paper_notebook": 0.06402018666267395,
+            "pencil_pouch": 0.08820049464702606
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_pen_pen_019.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.46268025040626526,
+            "paper_notebook": 0.14217963814735413,
+            "pencil_pouch": 0.0990353524684906
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7938111424446106,
+            "paper_notebook": 0.08769814670085907,
+            "pencil_pouch": 0.11087547987699509
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_pen_pen_020.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7777345180511475,
+            "paper_notebook": 0.00767827033996582,
+            "pencil_pouch": 0.00898316502571106
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.807545006275177,
+            "paper_notebook": 0.03262848034501076,
+            "pencil_pouch": 0.03330240398645401
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_pen_pen_021.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7552512884140015,
+            "paper_notebook": 0.01437118649482727,
+            "pencil_pouch": 0.01046210527420044
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.80003821849823,
+            "paper_notebook": 0.042554304003715515,
+            "pencil_pouch": 0.04042474925518036
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_pen_pen_022.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "paper_notebook",
+          "scores": {
+            "pen": 0.007584184408187866,
+            "paper_notebook": 0.5762499570846558,
+            "pencil_pouch": 0.05573341250419617
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.3192385137081146,
+            "paper_notebook": 0.03634541481733322,
+            "pencil_pouch": 0.017613718286156654
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_pen_pen_023.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.5635841488838196,
+            "paper_notebook": 0.001853257417678833,
+            "pencil_pouch": 0.008680552244186401
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.6829168796539307,
+            "paper_notebook": 0.03153270483016968,
+            "pencil_pouch": 0.024008292704820633
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_pen_pen_024.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.25591492652893066,
+            "paper_notebook": 0.002065002918243408,
+            "pencil_pouch": 0.006079167127609253
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.8058215379714966,
+            "paper_notebook": 0.03282232955098152,
+            "pencil_pouch": 0.016233768314123154
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_pen_pen_025.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.15519943833351135,
+            "paper_notebook": 0.0008608102798461914,
+            "pencil_pouch": 0.009114623069763184
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.6715965867042542,
+            "paper_notebook": 0.033323872834444046,
+            "pencil_pouch": 0.014910154044628143
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_pen_pen_027.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.6312491297721863,
+            "paper_notebook": 0.01065373420715332,
+            "pencil_pouch": 0.04739466309547424
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.8400666117668152,
+            "paper_notebook": 0.023122549057006836,
+            "pencil_pouch": 0.008415424264967442
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_pen_pen_028.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.4696366488933563,
+            "paper_notebook": 0.1867195963859558,
+            "pencil_pouch": 0.026532381772994995
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7280086278915405,
+            "paper_notebook": 0.04119694232940674,
+            "pencil_pouch": 0.019464699551463127
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_pen_pen_029.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.4750264286994934,
+            "paper_notebook": 0.019255071878433228,
+            "pencil_pouch": 0.07290714979171753
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.8130539655685425,
+            "paper_notebook": 0.10747415572404861,
+            "pencil_pouch": 0.006613997742533684
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_pen_pen_030.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7110949754714966,
+            "paper_notebook": 0.010876834392547607,
+            "pencil_pouch": 0.044180721044540405
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.8031798005104065,
+            "paper_notebook": 0.09328492730855942,
+            "pencil_pouch": 0.013965005055069923
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_pen_pen_031.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.6676817536354065,
+            "paper_notebook": 0.10366278886795044,
+            "pencil_pouch": 0.034232884645462036
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.8457399010658264,
+            "paper_notebook": 0.07106117159128189,
+            "pencil_pouch": 0.011127280071377754
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_pen_pen_032.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.6425833702087402,
+            "paper_notebook": 0.03703188896179199,
+            "pencil_pouch": 0.03928118944168091
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.8358844518661499,
+            "paper_notebook": 0.10942971706390381,
+            "pencil_pouch": 0.009062930941581726
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_pen_pen_033.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.69379723072052,
+            "paper_notebook": 0.01661190390586853,
+            "pencil_pouch": 0.02868083119392395
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.8473522663116455,
+            "paper_notebook": 0.025209663435816765,
+            "pencil_pouch": 0.01735926792025566
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_pen_pen_034.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7619069814682007,
+            "paper_notebook": 0.012349516153335571,
+            "pencil_pouch": 0.019445985555648804
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.8373020887374878,
+            "paper_notebook": 0.07275313138961792,
+            "pencil_pouch": 0.03650263696908951
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_pen_pen_035.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7240846157073975,
+            "paper_notebook": 0.006721466779708862,
+            "pencil_pouch": 0.016386806964874268
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.8551289439201355,
+            "paper_notebook": 0.025107186287641525,
+            "pencil_pouch": 0.011622684076428413
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "base_user_pen_pen_036.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7858611941337585,
+            "paper_notebook": 0.010142147541046143,
+            "pencil_pouch": 0.05740484595298767
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.8357915282249451,
+            "paper_notebook": 0.06609202921390533,
+            "pencil_pouch": 0.024000640958547592
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "pouch_pencil_pouch_008.jpg",
+      "truth": [
+        "pencil_pouch"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.03619477152824402,
+            "paper_notebook": 0.7159525156021118,
+            "pencil_pouch": 0.8184309005737305
+          }
+        },
+        "rfdetr": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.046016860753297806,
+            "paper_notebook": 0.012212486006319523,
+            "pencil_pouch": 0.7530329823493958
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "pouch_pencil_pouch_009.jpg",
+      "truth": [
+        "pencil_pouch"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.024168074131011963,
+            "paper_notebook": 0.5246883034706116,
+            "pencil_pouch": 0.8680605888366699
+          }
+        },
+        "rfdetr": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.058798111975193024,
+            "paper_notebook": 0.00460829446092248,
+            "pencil_pouch": 0.8136475086212158
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "pouch_pencil_pouch_016.jpg",
+      "truth": [
+        "pencil_pouch"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.039354532957077026,
+            "paper_notebook": 0.1042025089263916,
+            "pencil_pouch": 0.6859923601150513
+          }
+        },
+        "rfdetr": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.021301142871379852,
+            "paper_notebook": 0.045390695333480835,
+            "pencil_pouch": 0.5145729184150696
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "pouch_pencil_pouch_017.jpg",
+      "truth": [
+        "pencil_pouch"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.026215404272079468,
+            "paper_notebook": 0.16066017746925354,
+            "pencil_pouch": 0.6916625499725342
+          }
+        },
+        "rfdetr": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.061136793345212936,
+            "paper_notebook": 0.07424061745405197,
+            "pencil_pouch": 0.805667519569397
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "pouch_pencil_pouch_021.jpg",
+      "truth": [
+        "pencil_pouch"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.07938709855079651,
+            "paper_notebook": 0.4266737103462219,
+            "pencil_pouch": 0.9442633390426636
+          }
+        },
+        "rfdetr": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.03138219565153122,
+            "paper_notebook": 0.010215836577117443,
+            "pencil_pouch": 0.8998356461524963
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "pouch_pencil_pouch_022.jpg",
+      "truth": [
+        "pencil_pouch"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.008053958415985107,
+            "paper_notebook": 0.31768813729286194,
+            "pencil_pouch": 0.8985202312469482
+          }
+        },
+        "rfdetr": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.04397360235452652,
+            "paper_notebook": 0.007872911170125008,
+            "pencil_pouch": 0.8734719753265381
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "pouch_pencil_pouch_023.jpg",
+      "truth": [
+        "pencil_pouch"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.004708617925643921,
+            "paper_notebook": 0.5751141905784607,
+            "pencil_pouch": 0.8939086198806763
+          }
+        },
+        "rfdetr": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.07586034387350082,
+            "paper_notebook": 0.005595117341727018,
+            "pencil_pouch": 0.9318710565567017
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "pouch_pencil_pouch_032.jpg",
+      "truth": [
+        "pencil_pouch"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.005084514617919922,
+            "paper_notebook": 0.39017432928085327,
+            "pencil_pouch": 0.4552210867404938
+          }
+        },
+        "rfdetr": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.13990172743797302,
+            "paper_notebook": 0.010159539990127087,
+            "pencil_pouch": 0.8431662321090698
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "pouch_pencil_pouch_033.jpg",
+      "truth": [
+        "pencil_pouch"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.0035625100135803223,
+            "paper_notebook": 0.46228837966918945,
+            "pencil_pouch": 0.5130819082260132
+          }
+        },
+        "rfdetr": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.144189715385437,
+            "paper_notebook": 0.013829079456627369,
+            "pencil_pouch": 0.7568849325180054
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "pouch_pencil_pouch_034.jpg",
+      "truth": [
+        "pencil_pouch"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.0042702555656433105,
+            "paper_notebook": 0.3465854525566101,
+            "pencil_pouch": 0.5382030010223389
+          }
+        },
+        "rfdetr": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.12634365260601044,
+            "paper_notebook": 0.015514452010393143,
+            "pencil_pouch": 0.6964778900146484
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "pouch_pencil_pouch_043.jpg",
+      "truth": [
+        "pencil_pouch"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.001516580581665039,
+            "paper_notebook": 0.25557631254196167,
+            "pencil_pouch": 0.39622193574905396
+          }
+        },
+        "rfdetr": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.20049840211868286,
+            "paper_notebook": 0.013782856054604053,
+            "pencil_pouch": 0.7319067716598511
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "pouch_pencil_pouch_044.jpg",
+      "truth": [
+        "pencil_pouch"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.033613115549087524,
+            "paper_notebook": 0.00946652889251709,
+            "pencil_pouch": 0.8275753259658813
+          }
+        },
+        "rfdetr": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.02265392430126667,
+            "paper_notebook": 0.013773222453892231,
+            "pencil_pouch": 0.2616768181324005
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "pouch_pencil_pouch_048.jpg",
+      "truth": [
+        "pencil_pouch"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.6783883571624756,
+            "paper_notebook": 0.00876578688621521,
+            "pencil_pouch": 0.2498542070388794
+          }
+        },
+        "rfdetr": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.2760741412639618,
+            "paper_notebook": 0.01033500861376524,
+            "pencil_pouch": 0.510391891002655
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "pouch_pencil_pouch_050.jpg",
+      "truth": [
+        "pencil_pouch"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.025000959634780884,
+            "paper_notebook": 0.040449708700180054,
+            "pencil_pouch": 0.9524222612380981
+          }
+        },
+        "rfdetr": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.04719704017043114,
+            "paper_notebook": 0.006084309425204992,
+            "pencil_pouch": 0.8723990321159363
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "pouch_pencil_pouch_051.jpg",
+      "truth": [
+        "pencil_pouch"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.03203710913658142,
+            "paper_notebook": 0.416119784116745,
+            "pencil_pouch": 0.5125855803489685
+          }
+        },
+        "rfdetr": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.21046902239322662,
+            "paper_notebook": 0.040885355323553085,
+            "pencil_pouch": 0.3812066614627838
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "pouch_pencil_pouch_056.jpg",
+      "truth": [
+        "pencil_pouch"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.13326895236968994,
+            "paper_notebook": 0.5267954468727112,
+            "pencil_pouch": 0.607926607131958
+          }
+        },
+        "rfdetr": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.08881986141204834,
+            "paper_notebook": 0.011386389844119549,
+            "pencil_pouch": 0.8786512017250061
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "pouch_pencil_pouch_067.jpg",
+      "truth": [
+        "pencil_pouch"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.028432130813598633,
+            "paper_notebook": 0.7238825559616089,
+            "pencil_pouch": 0.7527934312820435
+          }
+        },
+        "rfdetr": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.1363847255706787,
+            "paper_notebook": 0.009797107428312302,
+            "pencil_pouch": 0.8750684261322021
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "pouch_pencil_pouch_070.jpg",
+      "truth": [
+        "pencil_pouch"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.00843098759651184,
+            "paper_notebook": 0.6416959166526794,
+            "pencil_pouch": 0.6548746824264526
+          }
+        },
+        "rfdetr": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.03527883067727089,
+            "paper_notebook": 0.014251059852540493,
+            "pencil_pouch": 0.8562213778495789
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "pouch_pencil_pouch_075.jpg",
+      "truth": [
+        "pencil_pouch"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.03030472993850708,
+            "paper_notebook": 0.471456378698349,
+            "pencil_pouch": 0.8468068838119507
+          }
+        },
+        "rfdetr": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.035745132714509964,
+            "paper_notebook": 0.00850058626383543,
+            "pencil_pouch": 0.9428625702857971
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "pouch_pencil_pouch_082.jpg",
+      "truth": [
+        "pencil_pouch"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.00978061556816101,
+            "paper_notebook": 0.6702839732170105,
+            "pencil_pouch": 0.8148192167282104
+          }
+        },
+        "rfdetr": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.02833780273795128,
+            "paper_notebook": 0.009303879924118519,
+            "pencil_pouch": 0.8174120187759399
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "pouch_pencil_pouch_100.jpg",
+      "truth": [
+        "pencil_pouch"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.14278006553649902,
+            "paper_notebook": 0.48010018467903137,
+            "pencil_pouch": 0.9623630046844482
+          }
+        },
+        "rfdetr": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.04724771901965141,
+            "paper_notebook": 0.015188791789114475,
+            "pencil_pouch": 0.9519649744033813
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "pouch_pencil_pouch_110.jpg",
+      "truth": [
+        "pencil_pouch"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.016556739807128906,
+            "paper_notebook": 0.7831981182098389,
+            "pencil_pouch": 0.9275927543640137
+          }
+        },
+        "rfdetr": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.04157860204577446,
+            "paper_notebook": 0.007919064722955227,
+            "pencil_pouch": 0.9635159969329834
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "pouch_pencil_pouch_120.jpg",
+      "truth": [
+        "pencil_pouch"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.007204234600067139,
+            "paper_notebook": 0.7521699666976929,
+            "pencil_pouch": 0.9157499074935913
+          }
+        },
+        "rfdetr": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.027504049241542816,
+            "paper_notebook": 0.011849050410091877,
+            "pencil_pouch": 0.8727162480354309
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "pouch_pencil_pouch_125.jpg",
+      "truth": [
+        "pencil_pouch"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.05431973934173584,
+            "paper_notebook": 0.13309034705162048,
+            "pencil_pouch": 0.8148666024208069
+          }
+        },
+        "rfdetr": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.03428314998745918,
+            "paper_notebook": 0.0062979538924992085,
+            "pencil_pouch": 0.8743707537651062
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "pouch_pencil_pouch_133.jpg",
+      "truth": [
+        "pencil_pouch"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "paper_notebook",
+          "scores": {
+            "pen": 0.03596091270446777,
+            "paper_notebook": 0.8527505993843079,
+            "pencil_pouch": 0.6084577441215515
+          }
+        },
+        "rfdetr": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.1102621778845787,
+            "paper_notebook": 0.008331513963639736,
+            "pencil_pouch": 0.919018030166626
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "pouch_pencil_pouch_134.jpg",
+      "truth": [
+        "pencil_pouch"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.07451507449150085,
+            "paper_notebook": 0.20568415522575378,
+            "pencil_pouch": 0.9083765745162964
+          }
+        },
+        "rfdetr": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.1763424128293991,
+            "paper_notebook": 0.02701251208782196,
+            "pencil_pouch": 0.5348764061927795
+          }
+        }
+      }
+    },
+    {
+      "split": "valid",
+      "file": "pouch_pencil_pouch_135.jpg",
+      "truth": [
+        "pencil_pouch"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.00793081521987915,
+            "paper_notebook": 0.7346298098564148,
+            "pencil_pouch": 0.79392409324646
+          }
+        },
+        "rfdetr": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.08213581144809723,
+            "paper_notebook": 0.007164266891777515,
+            "pencil_pouch": 0.9380112290382385
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_pen_video_vid2_0360.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.852097749710083,
+            "paper_notebook": 0.001512676477432251,
+            "pencil_pouch": 0.010692387819290161
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.791784405708313,
+            "paper_notebook": 0.013362187892198563,
+            "pencil_pouch": 0.02522224746644497
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_pen_video_vid2_0390.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.8198893070220947,
+            "paper_notebook": 0.0009877979755401611,
+            "pencil_pouch": 0.0031981468200683594
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.8004036545753479,
+            "paper_notebook": 0.007337649818509817,
+            "pencil_pouch": 0.009202241897583008
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_pen_video_vid2_0450.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7962647676467896,
+            "paper_notebook": 0.0011146962642669678,
+            "pencil_pouch": 0.004040718078613281
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7926109433174133,
+            "paper_notebook": 0.012022922746837139,
+            "pencil_pouch": 0.012373222038149834
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_pen_video_vid2_0480.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.10513386130332947,
+            "paper_notebook": 0.0012935101985931396,
+            "pencil_pouch": 0.04411989450454712
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.6531045436859131,
+            "paper_notebook": 0.03540167585015297,
+            "pencil_pouch": 0.011211552657186985
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_pen_video_vid2_0510.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.480509877204895,
+            "paper_notebook": 0.0003403127193450928,
+            "pencil_pouch": 0.010194271802902222
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7592722177505493,
+            "paper_notebook": 0.03495805338025093,
+            "pencil_pouch": 0.03967506065964699
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_pen_video_vid2_0540.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.6198158264160156,
+            "paper_notebook": 0.011059850454330444,
+            "pencil_pouch": 0.004221677780151367
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7854946851730347,
+            "paper_notebook": 0.010790267027914524,
+            "pencil_pouch": 0.017260141670703888
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_pen_video_vid2_0570.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.6974656581878662,
+            "paper_notebook": 0.003998786211013794,
+            "pencil_pouch": 0.00875428318977356
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7585566639900208,
+            "paper_notebook": 0.009249336086213589,
+            "pencil_pouch": 0.003326535690575838
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_pen_video_vid2_0600.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.6612693071365356,
+            "paper_notebook": 0.0027741193771362305,
+            "pencil_pouch": 0.004741281270980835
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.788602352142334,
+            "paper_notebook": 0.005621128715574741,
+            "pencil_pouch": 0.00844618957489729
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_pen_video_vid2_0630.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.8615725636482239,
+            "paper_notebook": 0.03916209936141968,
+            "pencil_pouch": 0.026787936687469482
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.39799752831459045,
+            "paper_notebook": 0.11220803111791611,
+            "pencil_pouch": 0.06551481038331985
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_reviewed_public_no_notebook_lvis_224541.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "paper_notebook",
+          "scores": {
+            "pen": 0.27427661418914795,
+            "paper_notebook": 0.38851630687713623,
+            "pencil_pouch": 0.08072781562805176
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7654286623001099,
+            "paper_notebook": 0.11051606386899948,
+            "pencil_pouch": 0.08208945393562317
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_reviewed_public_no_notebook_lvis_460068.jpg",
+      "truth": [],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7932210564613342,
+            "paper_notebook": 0.006876498460769653,
+            "pencil_pouch": 0.0644502341747284
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.49700048565864563,
+            "paper_notebook": 0.04008728638291359,
+            "pencil_pouch": 0.01923135481774807
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_reviewed_public_no_notebook_oi_train_004d395fc5fc3917.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7609856128692627,
+            "paper_notebook": 0.1381780505180359,
+            "pencil_pouch": 0.06049323081970215
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7657764554023743,
+            "paper_notebook": 0.10676682740449905,
+            "pencil_pouch": 0.00668267672881484
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_reviewed_public_no_notebook_oi_train_0075ba55bbacfe2c.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.7035564184188843,
+            "paper_notebook": 0.3591233491897583,
+            "pencil_pouch": 0.855470597743988
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.6153718829154968,
+            "paper_notebook": 0.03381562605500221,
+            "pencil_pouch": 0.007904467172920704
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_reviewed_public_no_notebook_oi_train_0dd3535587794996.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.8012924790382385,
+            "paper_notebook": 0.10298961400985718,
+            "pencil_pouch": 0.07298514246940613
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.6311603784561157,
+            "paper_notebook": 0.01472274586558342,
+            "pencil_pouch": 0.006684043910354376
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_reviewed_public_no_notebook_oi_train_1058d41dc3e91158.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.8487229347229004,
+            "paper_notebook": 0.005209743976593018,
+            "pencil_pouch": 0.02929064631462097
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.5052245259284973,
+            "paper_notebook": 0.02562694251537323,
+            "pencil_pouch": 0.04132945463061333
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_reviewed_public_no_notebook_oi_train_112f8766c5222ab7.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.5773722529411316,
+            "paper_notebook": 0.0005712211132049561,
+            "pencil_pouch": 0.024326860904693604
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.6609236001968384,
+            "paper_notebook": 0.020057274028658867,
+            "pencil_pouch": 0.0111091872677207
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_reviewed_public_no_notebook_oi_train_122ed8c968bdb7e7.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7181830406188965,
+            "paper_notebook": 0.0009895265102386475,
+            "pencil_pouch": 0.011450439691543579
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7639971971511841,
+            "paper_notebook": 0.0025407387875020504,
+            "pencil_pouch": 0.006485125981271267
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_reviewed_public_no_notebook_oi_train_1454259e334186fd.jpg",
+      "truth": [],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.49765828251838684,
+            "paper_notebook": 0.0568523108959198,
+            "pencil_pouch": 0.3446006774902344
+          }
+        },
+        "rfdetr": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.17134082317352295,
+            "paper_notebook": 0.13040201365947723,
+            "pencil_pouch": 0.46588313579559326
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_reviewed_public_no_notebook_oi_train_151f78f5d01cc521.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.8646787405014038,
+            "paper_notebook": 0.003253549337387085,
+            "pencil_pouch": 0.006654977798461914
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7426478862762451,
+            "paper_notebook": 0.008120198734104633,
+            "pencil_pouch": 0.033049099147319794
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_reviewed_public_no_notebook_oi_train_16f764cef45c33be.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.6261587738990784,
+            "paper_notebook": 0.04220789670944214,
+            "pencil_pouch": 0.03823655843734741
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7181156873703003,
+            "paper_notebook": 0.021301062777638435,
+            "pencil_pouch": 0.011271380819380283
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_reviewed_public_no_notebook_oi_train_1765c8ac89a8d07a.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.8238365650177002,
+            "paper_notebook": 0.003586024045944214,
+            "pencil_pouch": 0.0152052640914917
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7524007558822632,
+            "paper_notebook": 0.002157775452360511,
+            "pencil_pouch": 0.003190588438883424
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_reviewed_public_no_notebook_oi_train_1debd7f981425527.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.6970803737640381,
+            "paper_notebook": 0.0369279682636261,
+            "pencil_pouch": 0.028854399919509888
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7564458847045898,
+            "paper_notebook": 0.16700522601604462,
+            "pencil_pouch": 0.015096769668161869
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_reviewed_public_no_notebook_oi_train_1ef88787726e948e.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.5320075154304504,
+            "paper_notebook": 0.004447221755981445,
+            "pencil_pouch": 0.00312080979347229
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.6856414079666138,
+            "paper_notebook": 0.10889598727226257,
+            "pencil_pouch": 0.010197998024523258
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_reviewed_public_no_notebook_oi_train_1f621afa12caa990.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "paper_notebook",
+          "scores": {
+            "pen": 0.1356385350227356,
+            "paper_notebook": 0.2048899233341217,
+            "pencil_pouch": 0.037304461002349854
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.6382468938827515,
+            "paper_notebook": 0.09270590543746948,
+            "pencil_pouch": 0.053086552768945694
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_reviewed_public_no_notebook_oi_train_26769479b56b6f77.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.3751981854438782,
+            "paper_notebook": 0.04700767993927002,
+            "pencil_pouch": 0.7903624176979065
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.8094463348388672,
+            "paper_notebook": 0.013891016133129597,
+            "pencil_pouch": 0.024587389081716537
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_reviewed_public_no_notebook_oi_train_28a613affea7a9a1.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.8315141201019287,
+            "paper_notebook": 0.07892021536827087,
+            "pencil_pouch": 0.41501137614250183
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.5260834693908691,
+            "paper_notebook": 0.04067932814359665,
+            "pencil_pouch": 0.03507286310195923
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_reviewed_public_no_notebook_oi_train_2931b5bdf89addf9.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.2974368929862976,
+            "paper_notebook": 0.007773041725158691,
+            "pencil_pouch": 0.008714109659194946
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7489163279533386,
+            "paper_notebook": 0.013353030197322369,
+            "pencil_pouch": 0.033982012420892715
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_reviewed_public_no_notebook_oi_train_297b6aa3ae3a8145.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.6403864026069641,
+            "paper_notebook": 0.0065274834632873535,
+            "pencil_pouch": 0.053587913513183594
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.701927900314331,
+            "paper_notebook": 0.006729109212756157,
+            "pencil_pouch": 0.020266570150852203
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_reviewed_public_no_notebook_oi_train_29debbe0aef09f6d.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7733563184738159,
+            "paper_notebook": 0.0007508695125579834,
+            "pencil_pouch": 0.001871258020401001
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7963329553604126,
+            "paper_notebook": 0.05172032117843628,
+            "pencil_pouch": 0.02392341010272503
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_reviewed_public_no_notebook_oi_train_2f2a4a3b718bd4de.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7769784331321716,
+            "paper_notebook": 0.194212406873703,
+            "pencil_pouch": 0.0744985044002533
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7687817215919495,
+            "paper_notebook": 0.06229346990585327,
+            "pencil_pouch": 0.0047308155335485935
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_reviewed_public_no_notebook_oi_train_389ddec10936e87e.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.038786351680755615,
+            "paper_notebook": 0.021161049604415894,
+            "pencil_pouch": 0.0030963122844696045
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.6377388834953308,
+            "paper_notebook": 0.20478248596191406,
+            "pencil_pouch": 0.021192358806729317
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_reviewed_public_no_notebook_oi_train_3ad64765be1f9e68.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.8511114716529846,
+            "paper_notebook": 0.032968103885650635,
+            "pencil_pouch": 0.0034661591053009033
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7907344698905945,
+            "paper_notebook": 0.053610336035490036,
+            "pencil_pouch": 0.008080522529780865
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_reviewed_public_no_notebook_oi_train_3de924820607da36.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.08078935742378235,
+            "paper_notebook": 0.0032312870025634766,
+            "pencil_pouch": 0.006314754486083984
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.5647949576377869,
+            "paper_notebook": 0.0719275027513504,
+            "pencil_pouch": 0.02984866313636303
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_reviewed_public_no_notebook_oi_train_484a4337282dde1e.jpg",
+      "truth": [],
+      "predictions": {
+        "yolo": {
+          "top1": "paper_notebook",
+          "scores": {
+            "pen": 0.030262023210525513,
+            "paper_notebook": 0.4161180555820465,
+            "pencil_pouch": 0.22866728901863098
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.10545788705348969,
+            "paper_notebook": 0.07290549576282501,
+            "pencil_pouch": 0.016685625538229942
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_reviewed_public_no_notebook_oi_train_48e05c6cf497de77.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7957391738891602,
+            "paper_notebook": 0.0028192996978759766,
+            "pencil_pouch": 0.5833932161331177
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.6843464970588684,
+            "paper_notebook": 0.015097801573574543,
+            "pencil_pouch": 0.03696376457810402
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_reviewed_public_no_notebook_oi_train_5c108f0a977ad274.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7298955917358398,
+            "paper_notebook": 0.012511521577835083,
+            "pencil_pouch": 0.020456910133361816
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.6276061534881592,
+            "paper_notebook": 0.019466547295451164,
+            "pencil_pouch": 0.04273936152458191
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_reviewed_public_no_notebook_oi_train_6e16a23506b95f4d.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.3512426018714905,
+            "paper_notebook": 0.07888242602348328,
+            "pencil_pouch": 0.028875917196273804
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.6493567228317261,
+            "paper_notebook": 0.028572097420692444,
+            "pencil_pouch": 0.012855751439929008
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_reviewed_public_no_notebook_oi_train_754a4b7155d965a1.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.6931969523429871,
+            "paper_notebook": 0.0062142014503479,
+            "pencil_pouch": 0.038047194480895996
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.6986281275749207,
+            "paper_notebook": 0.013111475855112076,
+            "pencil_pouch": 0.007257567252963781
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_reviewed_public_no_notebook_oi_train_77ab990531ee4d26.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.696210503578186,
+            "paper_notebook": 0.0027393698692321777,
+            "pencil_pouch": 0.015243977308273315
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.766388475894928,
+            "paper_notebook": 0.011963053606450558,
+            "pencil_pouch": 0.0024524435866624117
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_reviewed_public_no_notebook_oi_train_842d50f67cf4f722.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.5732848644256592,
+            "paper_notebook": 0.01757967472076416,
+            "pencil_pouch": 0.06570419669151306
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.733310878276825,
+            "paper_notebook": 0.0883721336722374,
+            "pencil_pouch": 0.01457270234823227
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_reviewed_public_no_notebook_oi_train_859a98063aa5717a.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.637631893157959,
+            "paper_notebook": 0.0038216114044189453,
+            "pencil_pouch": 0.006450861692428589
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7476040720939636,
+            "paper_notebook": 0.009363052435219288,
+            "pencil_pouch": 0.007206495385617018
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_reviewed_public_no_notebook_oi_train_89c0802ec31e8ae9.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.6062922477722168,
+            "paper_notebook": 0.01626148819923401,
+            "pencil_pouch": 0.6810398101806641
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.5109798908233643,
+            "paper_notebook": 0.004000880289822817,
+            "pencil_pouch": 0.008022700436413288
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_reviewed_public_no_notebook_oi_train_942aec33bfd9c4d5.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "paper_notebook",
+          "scores": {
+            "pen": 0.23364809155464172,
+            "paper_notebook": 0.38364696502685547,
+            "pencil_pouch": 0.03742888569831848
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.6722679734230042,
+            "paper_notebook": 0.38285908102989197,
+            "pencil_pouch": 0.051666442304849625
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_reviewed_public_no_notebook_oi_train_957e46fa0bc32f73.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7845731973648071,
+            "paper_notebook": 0.04090502858161926,
+            "pencil_pouch": 0.11865359544754028
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.728955864906311,
+            "paper_notebook": 0.02976067364215851,
+            "pencil_pouch": 0.012432598508894444
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_reviewed_public_no_notebook_oi_train_9a85e0b2a136d17c.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.4949108958244324,
+            "paper_notebook": 0.04851892590522766,
+            "pencil_pouch": 0.15195971727371216
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7742295265197754,
+            "paper_notebook": 0.037407949566841125,
+            "pencil_pouch": 0.059831853955984116
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_reviewed_public_no_notebook_oi_train_9def274d67c3c601.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.2800399661064148,
+            "paper_notebook": 0.010764092206954956,
+            "pencil_pouch": 0.00335577130317688
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.5950040817260742,
+            "paper_notebook": 0.36909055709838867,
+            "pencil_pouch": 0.025622842833399773
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_reviewed_public_no_notebook_oi_train_a14b25bb8d52d980.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.822417140007019,
+            "paper_notebook": 0.00020042061805725098,
+            "pencil_pouch": 0.013781607151031494
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7412458658218384,
+            "paper_notebook": 0.008671775460243225,
+            "pencil_pouch": 0.25296491384506226
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_reviewed_public_no_notebook_oi_train_a7248d6bb31e60f0.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.4849250614643097,
+            "paper_notebook": 0.001641780138015747,
+            "pencil_pouch": 0.03330269455909729
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7276738286018372,
+            "paper_notebook": 0.008555502630770206,
+            "pencil_pouch": 0.0151296341791749
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_reviewed_public_no_notebook_oi_train_ad89b05a40c140b4.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.363094687461853,
+            "paper_notebook": 0.1248893141746521,
+            "pencil_pouch": 0.028935492038726807
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.5828362107276917,
+            "paper_notebook": 0.4441162347793579,
+            "pencil_pouch": 0.020794248208403587
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_reviewed_public_no_notebook_oi_train_b97f945cfd23b9e8.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.5383243560791016,
+            "paper_notebook": 0.01670411229133606,
+            "pencil_pouch": 0.3713000416755676
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.6914697885513306,
+            "paper_notebook": 0.004858063068240881,
+            "pencil_pouch": 0.008505712263286114
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_reviewed_public_no_notebook_oi_train_c271c33e20533d2c.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.36361953616142273,
+            "paper_notebook": 0.04470089077949524,
+            "pencil_pouch": 0.06866902112960815
+          }
+        },
+        "rfdetr": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.4267852306365967,
+            "paper_notebook": 0.01372947171330452,
+            "pencil_pouch": 0.49609139561653137
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_reviewed_public_no_notebook_oi_train_c31ccf7c678ce71f.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7097371816635132,
+            "paper_notebook": 0.08102953433990479,
+            "pencil_pouch": 0.15068534016609192
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7734805941581726,
+            "paper_notebook": 0.011477482505142689,
+            "pencil_pouch": 0.008898190222680569
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_reviewed_public_no_notebook_oi_train_c3cfdb946e3e88b7.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.5765780210494995,
+            "paper_notebook": 0.12006539106369019,
+            "pencil_pouch": 0.1716335415840149
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7682741284370422,
+            "paper_notebook": 0.05696805939078331,
+            "pencil_pouch": 0.008699953556060791
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_reviewed_public_no_notebook_oi_train_c49767de7ebc2c4b.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.04592418670654297,
+            "paper_notebook": 0.014438629150390625,
+            "pencil_pouch": 0.016269773244857788
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7533349394798279,
+            "paper_notebook": 0.09476685523986816,
+            "pencil_pouch": 0.004663287661969662
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_reviewed_public_no_notebook_oi_train_d31ad1f180090c48.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7207115888595581,
+            "paper_notebook": 0.08977949619293213,
+            "pencil_pouch": 0.009562075138092041
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7973113656044006,
+            "paper_notebook": 0.0086751664057374,
+            "pencil_pouch": 0.016781877726316452
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_reviewed_public_no_notebook_oi_train_d6860159e05a94cf.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.5481553077697754,
+            "paper_notebook": 0.022696703672409058,
+            "pencil_pouch": 0.1596505045890808
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.6858541965484619,
+            "paper_notebook": 0.03815959766507149,
+            "pencil_pouch": 0.007831661030650139
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_reviewed_public_no_notebook_oi_train_da90d6023f3799eb.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.6185669302940369,
+            "paper_notebook": 0.12305280566215515,
+            "pencil_pouch": 0.035070449113845825
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.594892680644989,
+            "paper_notebook": 0.027372805401682854,
+            "pencil_pouch": 0.03821868821978569
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_reviewed_public_no_notebook_oi_train_dda0c332e357b380.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.6955459117889404,
+            "paper_notebook": 0.2875552177429199,
+            "pencil_pouch": 0.006826668977737427
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.8007054328918457,
+            "paper_notebook": 0.058020785450935364,
+            "pencil_pouch": 0.01172908116132021
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_reviewed_public_no_notebook_oi_train_ddf672c1438e8772.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.4648721516132355,
+            "paper_notebook": 0.003521561622619629,
+            "pencil_pouch": 0.017011135816574097
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7764317393302917,
+            "paper_notebook": 0.006944496184587479,
+            "pencil_pouch": 0.003507907735183835
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_reviewed_public_no_notebook_oi_train_ec7c1c51fd1065fc.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.6444425582885742,
+            "paper_notebook": 0.004440337419509888,
+            "pencil_pouch": 0.047268956899642944
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7140385508537292,
+            "paper_notebook": 0.021715043112635612,
+            "pencil_pouch": 0.0482727512717247
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_reviewed_public_no_notebook_oi_train_f1597de5376cc653.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.49172475934028625,
+            "paper_notebook": 0.034174323081970215,
+            "pencil_pouch": 0.17015302181243896
+          }
+        },
+        "rfdetr": {
+          "top1": "paper_notebook",
+          "scores": {
+            "pen": 0.18018947541713715,
+            "paper_notebook": 0.6482529044151306,
+            "pencil_pouch": 0.08834586292505264
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_reviewed_public_no_notebook_oi_train_f57bcc9c7bfffa6e.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.4477456212043762,
+            "paper_notebook": 0.030299395322799683,
+            "pencil_pouch": 0.019872605800628662
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7517460584640503,
+            "paper_notebook": 0.015604838728904724,
+            "pencil_pouch": 0.022845450788736343
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_reviewed_public_no_notebook_oi_train_f57db9a9e5e08687.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.8248674869537354,
+            "paper_notebook": 0.2578638195991516,
+            "pencil_pouch": 0.009179681539535522
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.6522399187088013,
+            "paper_notebook": 0.04711408168077469,
+            "pencil_pouch": 0.006044023670256138
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_reviewed_public_no_notebook_oi_validation_e7bf630c163e9cbe.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pencil_pouch",
+          "scores": {
+            "pen": 0.5182159543037415,
+            "paper_notebook": 0.1280345320701599,
+            "pencil_pouch": 0.5338638424873352
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.732944905757904,
+            "paper_notebook": 0.1099010482430458,
+            "pencil_pouch": 0.06893172860145569
+          }
+        }
+      }
+    },
+    {
+      "split": "test",
+      "file": "base_reviewed_public_no_notebook_oi_validation_fb60a6daca838873.jpg",
+      "truth": [
+        "pen"
+      ],
+      "predictions": {
+        "yolo": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.8431059122085571,
+            "paper_notebook": 0.6288046836853027,
+            "pencil_pouch": 0.06506958603858948
+          }
+        },
+        "rfdetr": {
+          "top1": "pen",
+          "scores": {
+            "pen": 0.7459830641746521,
+            "paper_notebook": 0.02985144965350628,
+            "pencil_pouch": 0.015610252507030964
+          }
+        }
+      }
+    }
+  ]
+}
