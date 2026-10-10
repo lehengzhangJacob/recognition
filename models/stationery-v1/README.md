@@ -43,6 +43,16 @@ Four validation images contain both a pen and a notebook, so they are excluded f
 - RF-DETR Nano: official COCO pretrained initialization, 25 epochs, 576px resolution, effective batch 16 (batch 4, gradient accumulation 4), three output classes. See `rf-detr-nano-3class/experiment.json` and `evaluation_iou50.json`.
 - Source dataset counts: the two-class pen/notebook set had 479 train, 67 validation, and 65 test images; 108 pouch images were added to training and 27 to validation. The images and labels are not included in this repository.
 
+
+## USB / Type-C camera on CPU
+
+These two standalone Python programs use the RF-DETR three-class ONNX file with ONNX Runtime's CPU provider. A Type-C UVC camera is opened through OpenCV just like any other USB camera. Install dependencies with `python -m pip install numpy opencv-python onnxruntime`. From this version directory, first run `python scripts/assemble_rf_detr_artifacts.py` to reconstruct `rf-detr-nano-3class/model.onnx` from the checked-in parts.
+
+- Standard pattern/object detection: `python scripts/usb_camera_rfdetr_detect.py --camera 0` — shows every qualifying box for pen, notebook and pencil pouch. Default class thresholds are 0.30, 0.45 and 0.30. Set `--pen-conf`, `--notebook-conf` or `--pouch-conf` to adjust them.
+- Forced relative top-1: `python scripts/usb_camera_rfdetr_top1.py --camera 0` — selects the highest score among the three classes for the whole frame and draws its box. It always picks a class, including on frames with no target. This is the same rule used in the 98.9% image-level validation experiment.
+
+Both request 1280×720 capture by default; use `--width` and `--height` to change it. Camera indices differ across computers, so try `--camera 1` or a Linux device path such as `--camera /dev/video2` if camera 0 is not the Type-C device. `q` or Esc quits; `s` saves an annotated frame. `--model PATH` accepts an ONNX file elsewhere. To test without a camera, add `--image PATH --save annotated.jpg`. Camera capture needs a local desktop session that can display an OpenCV window. Actual frame rate depends on the computer CPU.
+
 ## Reproduction scripts
 
 The scripts used to prepare datasets, fine-tune and evaluate are under `scripts/`. They expect the original project's dataset directories and Python environments. The model files are ready-to-run inference artifacts; training scripts require the corresponding frameworks, pretrained source weights and local datasets.
