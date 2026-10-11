@@ -56,3 +56,7 @@ Both request 1280×720 capture by default; use `--width` and `--height` to chang
 ## Reproduction scripts
 
 The scripts used to prepare datasets, fine-tune and evaluate are under `scripts/`. They expect the original project's dataset directories and Python environments. The model files are ready-to-run inference artifacts; training scripts require the corresponding frameworks, pretrained source weights and local datasets.
+
+## Vending confirmation prototype
+
+For the Y7000P laptop front camera and SQLite confirmation workflow, see [`Y7000P_SETUP.md`](Y7000P_SETUP.md) and `scripts/vending_confirm_camera.py`. The prototype uses the RF-DETR CPU ONNX model, a transaction arm action, a fixed camera region, temporal voting and a visual change gate before writing one confirmation row per dispense ID.
